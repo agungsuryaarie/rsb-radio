@@ -11,21 +11,30 @@
             <a class="nav-link" href=""><i class="fas fa-fire"></i>
                 <span>Dashboard</span></a>
         </li>
+
         <li class="menu-header">Menu</li>
-        <li class="dropdown">
-            <a href="#" class="nav-link has-dropdown" data-toggle="dropdown"><i class="fas fa-columns"></i>
-                <span>Master Data</span></a>
-            <ul class="dropdown-menu">
-                <li><a class="nav-link" href="{{ route('penyiar.index') }}">Penyiar</a></li>
-                <li><a class="nav-link" href="#">Playlist</a></li>
-                <li><a class="nav-link" href="#">Siaran</a></li>
-                <li><a class="nav-link" href="#">News</a></li>
-                <li><a class="nav-link" href="#">Galery</a></li>
-                <li><a class="nav-link" href="#">User</a></li>
-                {{-- <li><a class="nav-link" href="/register">Register</a></li>
-                <li><a class="nav-link" href="/login">Login</a></li> --}}
-            </ul>
+
+        <li>
+            <a class="nav-link" href="{{ route('penyiar.index') }}"><i class="fa-regular fa-users"></i>
+                <span>Penyiar</span></a>
         </li>
+        <li>
+            <a class="nav-link" href=""><i class="fas fa-th-large"></i>
+                <span>Playlist</span></a>
+        </li>
+        <li>
+            <a class="nav-link" href=""><i class="fas fa-plug"></i>
+                <span>Siaran</span></a>
+        </li>
+        <li>
+            <a class="nav-link" href=""><i class="fas fa-columns"></i>
+                <span>Galery</span></a>
+        </li>
+        <li>
+            <a class="nav-link" href=""><i class="far fa-user"></i>
+                <span>User</span></a>
+        </li>
+
         <li>
             <a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank
                     Page</span></a>
