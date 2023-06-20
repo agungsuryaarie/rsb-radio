@@ -8,7 +8,8 @@
     <ul class="sidebar-menu">
         <li class="menu-header">Dashboard</li>
         <li class=active>
-            <a class="nav-link" href="blank.html"><i class="fas fa-fire"></i> <span>Dashboard</span></a>
+            <a class="nav-link" href=""><i class="fas fa-fire"></i>
+                <span>Dashboard</span></a>
         </li>
         <li class="menu-header">Menu</li>
         <li class="dropdown">
@@ -21,6 +22,8 @@
                 <li><a class="nav-link" href="#">News</a></li>
                 <li><a class="nav-link" href="#">Galery</a></li>
                 <li><a class="nav-link" href="#">User</a></li>
+                {{-- <li><a class="nav-link" href="/register">Register</a></li>
+                <li><a class="nav-link" href="/login">Login</a></li> --}}
             </ul>
         </li>
         <li>
