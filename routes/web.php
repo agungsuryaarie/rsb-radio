@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\PenyiarController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,17 +16,10 @@ use App\Http\Controllers\Admin\PenyiarController;
 */
 
 Route::get('/', function () {
-    return view('admin.dashboard');
+    return view('welcome');
 });
-Route::get('/login', function () {
-    return view('auths.login');
-});
-Route::get('/register', function () {
-    return view('auths.register');
-});
-
-Route::get('/penyiar', [PenyiarController::class, 'index'])->name('penyiar.index');
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/penyiar', [PenyiarController::class, 'index'])->name('penyiar.index');
