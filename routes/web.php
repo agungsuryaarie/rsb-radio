@@ -17,6 +17,12 @@ use App\Http\Controllers\Admin\PenyiarController;
 Route::get('/', function () {
     return view('admin.dashboard');
 });
+Route::get('/login', function () {
+    return view('auths.login');
+});
+Route::get('/register', function () {
+    return view('auths.register');
+});
 
 Route::get('/penyiar', [PenyiarController::class, 'index'])->name('penyiar.index');
 
