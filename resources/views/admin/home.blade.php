@@ -2,14 +2,7 @@
 
 @section('content')
     <section class="section">
-        <div class="section-header">
-            <h1>Daftar Penyiar</h1>
-            <div class="section-header-breadcrumb">
-                <div class="breadcrumb-item active"><a href="#">Dashboard</a></div>
-                <div class="breadcrumb-item"><a href="#">Master Data</a></div>
-                <div class="breadcrumb-item">Data Penyiar</div>
-            </div>
-        </div>
+        <x-breadcrumb menu="{{ $menu }}"></x-breadcrumb>
 
         <div class="section-body">
             <div class="row">

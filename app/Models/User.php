@@ -19,7 +19,9 @@ class User extends Authenticatable
      */
     protected $fillable = [
         'name',
+        'role',
         'email',
+        'host',
         'password',
     ];
 
@@ -42,4 +44,14 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function isAdmin()
+    {
+        return $this->role === '1';
+    }
+
+    public function profile()
+    {
+        return $this->hasOne(Profile::class);
+    }
 }

@@ -1,43 +1,43 @@
 <aside id="sidebar-wrapper">
     <div class="sidebar-brand">
-        <a href="index.html">RSB</a>
+        <a href="{{ route('home') }}">RSB</a>
     </div>
     <div class="sidebar-brand sidebar-brand-sm">
-        <a href="index.html">St</a>
+        <a href="{{ route('home') }}">RSB</a>
     </div>
     <ul class="sidebar-menu">
         <li class="menu-header">Dashboard</li>
-        <li class=active>
-            <a class="nav-link" href=""><i class="fas fa-fire"></i>
+        <li class="{{ request()->segment(2) == 'home' ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('home') }}"><i class="fas fa-home"></i>
                 <span>Dashboard</span></a>
         </li>
 
         <li class="menu-header">Menu</li>
 
-        <li>
-            <a class="nav-link" href="{{ route('penyiar.index') }}"><i class="fa-regular fa-users"></i>
-                <span>Penyiar</span></a>
+        <li class="{{ request()->segment(2) == 'post' ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('post.index') }}"><i class="fas fa-paper-plane"></i>
+                <span>Post</span></a>
         </li>
-        <li>
-            <a class="nav-link" href=""><i class="fas fa-th-large"></i>
+        <li class="{{ request()->segment(2) == 'playlist' ? 'active' : '' }}">
+            <a class="nav-link" href=""><i class="fas fa-play"></i>
                 <span>Playlist</span></a>
         </li>
-        <li>
-            <a class="nav-link" href=""><i class="fas fa-plug"></i>
-                <span>Siaran</span></a>
+        <li class="{{ request()->segment(2) == 'program' ? 'active' : '' }}">
+            <a class="nav-link" href=""><i class="fas fa-sliders-h"></i>
+                <span>Program</span></a>
         </li>
-        <li>
-            <a class="nav-link" href=""><i class="fas fa-columns"></i>
+        <li class="{{ request()->segment(2) == 'galery' ? 'active' : '' }}">
+            <a class="nav-link" href=""><i class="fas fa-images"></i>
                 <span>Galery</span></a>
         </li>
-        <li>
-            <a class="nav-link" href=""><i class="far fa-user"></i>
+        <li class="{{ request()->segment(2) == 'user' ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('user.index') }}"><i class="fas fa-users"></i>
                 <span>User</span></a>
         </li>
 
-        <li>
-            <a class="nav-link" href="blank.html"><i class="far fa-square"></i> <span>Blank
-                    Page</span></a>
+        <li class="{{ request()->segment(2) == 'profile' ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('profile.index') }}"><i class="far fa-user"></i>
+                <span>Profile</span></a>
         </li>
     </ul>
 </aside>
