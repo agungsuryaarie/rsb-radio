@@ -20,6 +20,38 @@ function alertDanger(message) {
     }, 5000);
 }
 
+$("#inputGroupFile01").change(function(event) {
+    RecurFadeIn();
+    readURL(this);
+});
+$("#inputGroupFile01").on('click', function(event) {
+    RecurFadeIn();
+});
+
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+        var filename = $("#inputGroupFile01").val();
+        filename = filename.substring(filename.lastIndexOf('\\') + 1);
+        reader.onload = function(e) {
+            $('#preview').attr('src', e.target.result);
+            $('#preview').hide();
+            $('#preview').fadeIn(500);
+            $('.custom-file-label').text(filename);
+        }
+        reader.readAsDataURL(input.files[0]);
+    }
+    $("#pleasewait").removeClass("loading").hide();
+}
+
+function RecurFadeIn() {
+    FadeInAlert("Wait for it...");
+}
+
+function FadeInAlert(text) {
+    $("#pleasewait").show();
+    $("#pleasewait").text(text).addClass("loading");
+}
 
 function DataTable(ajaxUrl, columns) {
     var table = $(".table").DataTable({

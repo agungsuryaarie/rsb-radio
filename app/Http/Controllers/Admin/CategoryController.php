@@ -13,6 +13,7 @@ class CategoryController extends Controller
 {
     public function index(Request $request)
     {
+        $menu = 'Kategori';
         if ($request->ajax()) {
             $data = Category::latest()->get();
             return Datatables::of($data)
@@ -25,6 +26,8 @@ class CategoryController extends Controller
                 ->rawColumns(['action'])
                 ->make(true);
         }
+
+        return view('admin.kategori.data', compact('menu'));
     }
 
     public function store(Request $request)
@@ -65,11 +68,5 @@ class CategoryController extends Controller
     {
         Category::find($id)->delete();
         return response()->json(['success' => 'Kategori deleted successfully.']);
-    }
-
-    public function show()
-    {
-        $data = Category::get(["name", "id"]);
-        return response()->json($data);
     }
 }

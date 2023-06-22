@@ -30,7 +30,6 @@ Route::prefix('admin')->middleware('role:1')->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::resource('/post', PostController::class);
     Route::resource('/category', CategoryController::class);
-    Route::get('category/get-category', [CategoryController::class, 'show']);
     Route::resource('/user', UserController::class);
     Route::resource('/profile', ProfileController::class);
 });
