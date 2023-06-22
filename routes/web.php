@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\Admin\CategoryController;
+use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\PostController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\Admin\PenyiarController;
-use App\Http\Controllers\HomeController;
+use App\Http\Controllers\Admin\ProfileController;
+use App\Http\Controllers\Admin\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,5 +24,13 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::get('/penyiar', [PenyiarController::class, 'index'])->name('penyiar.index');
+
+
+Route::prefix('admin')->middleware('role:1')->group(function () {
+    Route::get('/home', [HomeController::class, 'index'])->name('home');
+    Route::resource('/post', PostController::class);
+    Route::resource('/category', CategoryController::class);
+    Route::get('category/get-category', [CategoryController::class, 'show']);
+    Route::resource('/user', UserController::class);
+    Route::resource('/profile', ProfileController::class);
+});
