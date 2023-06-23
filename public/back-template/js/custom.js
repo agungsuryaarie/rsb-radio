@@ -128,6 +128,45 @@ function saveBtn(urlStore, table) {
     });
 }
 
+function saveImage(urlStore, table) {
+    $("#saveBtn").click(function(e) {
+        e.preventDefault();
+        $(this).html(
+            "<span class='spinner-border spinner-border-sm'></span><span class='visually-hidden'><i> menyimpan...</i></span>"
+        );
+
+        var form = $("#ajaxForm")[0]; // Ambil form element secara langsung
+        var data = new FormData(form); // Gunakan FormData untuk mengirim data termasuk file
+
+        $.ajax({
+            data: data,
+            url: urlStore,
+            type: "POST",
+            dataType: "json",
+            contentType: false, // Set contentType ke false agar FormData dapat bekerja dengan benar
+            processData: false, // Set processData ke false agar FormData dapat bekerja dengan benar
+            success: function(data) {
+                if (data.errors) {
+                    $('.alert-danger').html('');
+                    $.each(data.errors, function(key, value) {
+                        $('.alert-danger').show();
+                        $('.alert-danger').append('<strong><li>' +
+                            value +
+                            '</li></strong>');
+                        $(".alert-danger").fadeOut(5000);
+                        $("#saveBtn").html("Simpan");
+                    });
+                } else {
+                    table.draw();
+                    alertToastr(data.success);
+                    $("#saveBtn").html("Simpan");
+                    $('#ajaxModel').modal('hide');
+                }
+            },
+        });
+    });
+}
+
 function Delete(fitur, editUrl, deleteUrl, table) {
     $("body").on("click", ".delete", function () {
         var deleteId = $(this).data("id");
@@ -168,31 +207,6 @@ function Delete(fitur, editUrl, deleteUrl, table) {
                 },
             });
         }); 
-    });
-}
-
-function getData(appendKosong, urlGet, selector, append) {
-    $('#instansi_id').on('change', function() {
-        var seletedId = this.value;
-        appendKosong.empty();
-        var csrfToken = $('meta[name="csrf-token"]').attr('content');
-        $.ajax({
-            url: urlGet,
-            type: "POST",
-            data: {
-                idSeleted: seletedId,
-                _token: csrfToken
-            },
-            dataType: 'json',
-            success: function (result) {
-                $(selector).html(append);
-                $.each(result, function(key, value) {
-                    $(selector).append('<option value="' +
-                        value.id + '">' + value.name +
-                        '</option>');
-                });
-            }
-        });
     });
 }
 

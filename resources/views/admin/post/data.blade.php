@@ -34,8 +34,8 @@
                     name: "title",
                 },
                 {
-                    data: "categories",
-                    name: "categories",
+                    data: "category",
+                    name: "category",
                 },
                 {
                     data: "author",

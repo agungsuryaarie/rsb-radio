@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin\AlbumController;
 use App\Http\Controllers\Admin\CategoryController;
 use App\Http\Controllers\Admin\HomeController;
+use App\Http\Controllers\Admin\PhotoController;
 use App\Http\Controllers\Admin\PostController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProfileController;
@@ -32,4 +34,7 @@ Route::prefix('admin')->middleware('role:1')->group(function () {
     Route::resource('/category', CategoryController::class);
     Route::resource('/user', UserController::class);
     Route::resource('/profile', ProfileController::class);
+    Route::resource('/album', AlbumController::class);
+    Route::get('/album/photo/{id}', [PhotoController::class, 'index'])->name('photo.index');
+    Route::post('/album/photo/store/{id}', [PhotoController::class, 'store'])->name('photo.store');
 });

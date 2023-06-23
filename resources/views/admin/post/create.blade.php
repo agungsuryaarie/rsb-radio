@@ -13,9 +13,9 @@
                     <div class="card-body">
                         <x-inputValue type="text" name="title" label="Judul" value="">
                         </x-inputValue>
-                        <x-dropdown name="categories_id" label="Kategori">
+                        <x-dropdown name="category_id" label="Kategori">
                             @foreach ($kategori as $item)
-                                <option value="{{ $item->id }}" @selected(old('categories_id') == $item->id)>
+                                <option value="{{ $item->id }}" @selected(old('category_id') == $item->id)>
                                     {{ $item->name }}</option>
                             @endforeach
                         </x-dropdown>

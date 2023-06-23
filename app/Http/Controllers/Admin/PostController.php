@@ -20,8 +20,8 @@ class PostController extends Controller
             $data = Post::latest()->get();
             return Datatables::of($data)
                 ->addIndexColumn()
-                ->addColumn('categories', function ($data) {
-                    return $data->categories->name;
+                ->addColumn('category', function ($data) {
+                    return $data->category->name;
                 })
                 ->addColumn('author', function ($data) {
                     return $data->user->name;
@@ -50,7 +50,7 @@ class PostController extends Controller
         //Translate Bahasa Indonesia
         $message = array(
             'title.required'            => 'Judul harus diisi.',
-            'categories_id.required'    => 'Kategori harus dipilih.',
+            'category_id.required'    => 'Kategori harus dipilih.',
             'content.required'          => 'Konten harus diisi.',
             'status.required'           => 'Status harus dipilih.',
         );
@@ -58,9 +58,10 @@ class PostController extends Controller
         // Validasi input dengan rule yang ditentukan
         $validator = Validator::make($request->all(), [
             'title'             => 'required',
-            'categories_id'     => 'required',
+            'category_id'     => 'required',
             'content'           => 'required',
             'status'            => 'required',
+            'image'             => $request->hidden_id ? 'nullable' : 'required', // Menjadikan gambar opsional saat edit
         ], $message);
 
         if ($validator->fails()) {
@@ -72,21 +73,23 @@ class PostController extends Controller
 
         if ($request->hasFile('image')) {
             // Hapus gambar lama dari storage jika ada
-            $post = Post::find($request->hidden_id);
-            $oldImage = $post->image;
-            if ($oldImage) {
-                Storage::delete('public/post/' . Auth::user()->id . '/' . $oldImage);
+            if ($request->hidden_id) {
+                $post = Post::find($request->hidden_id);
+                $oldImage = $post->image;
+                if ($oldImage) {
+                    Storage::delete('public/post/' . $oldImage);
+                }
             }
 
             // Unggah gambar baru
             $image = $request->file('image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
-            $image->storeAs('public/post/' . Auth::user()->id, $filename);
+            $image->storeAs('public/post', $filename);
         }
 
         $postData = [
             'user_id' => Auth::user()->id,
-            'categories_id' => $request->categories_id,
+            'category_id' => $request->category_id,
             'title' => $request->title,
             'content' => $request->content,
             'status' => $request->status,
@@ -118,7 +121,7 @@ class PostController extends Controller
     {
         $post = Post::find($id);
         if ($post->image) {
-            Storage::delete('public/post/' . Auth::user()->id . '/' . $post->image);
+            Storage::delete('public/post/' . $post->image);
         }
         $post->delete();
         return response()->json(['success' => 'Post deleted successfully.']);

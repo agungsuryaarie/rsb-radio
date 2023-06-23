@@ -32,9 +32,9 @@
             <a class="nav-link" href=""><i class="fas fa-sliders-h"></i>
                 <span>Program</span></a>
         </li>
-        <li class="{{ request()->segment(2) == 'galery' ? 'active' : '' }}">
-            <a class="nav-link" href=""><i class="fas fa-images"></i>
-                <span>Galery</span></a>
+        <li class="{{ request()->segment(2) == 'album' ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('album.index') }}"><i class="fas fa-images"></i>
+                <span>Album</span></a>
         </li>
         <li class="{{ request()->segment(2) == 'user' ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('user.index') }}"><i class="fas fa-users"></i>

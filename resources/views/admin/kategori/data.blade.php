@@ -50,7 +50,7 @@
             // Edit
             var editUrl = "{{ route('category.index') }}";
             var editHeading = "Edit Kategori";
-            var field = ['name', 'email', 'role', 'broadcaster']; // disesuaikan dengan data yang ingin di tampilkan
+            var field = ['name']; // disesuaikan dengan data yang ingin di tampilkan
             editModel(editUrl, editHeading, field)
 
             // Save

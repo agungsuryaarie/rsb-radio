@@ -11,14 +11,14 @@ class Post extends Model
 
     protected $fillable = [
         'user_id',
-        'categories_id',
+        'category_id',
         'title',
         'content',
         'image',
         'status',
     ];
 
-    public function categories()
+    public function category()
     {
         return $this->belongsTo(Category::class);
     }
