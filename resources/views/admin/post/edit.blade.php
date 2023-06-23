@@ -37,12 +37,6 @@
             </div>
         </div>
     </section>
-
-    <x-ajaxModel size="">
-        <x-input type="text" name="name" label="Nama"></x-input>
-    </x-ajaxModel>
-
-    <x-modalDelete></x-modalDelete>
 @endsection
 
 @section('script')

@@ -29,7 +29,7 @@
                 <span>Playlist</span></a>
         </li>
         <li class="{{ request()->segment(2) == 'program' ? 'active' : '' }}">
-            <a class="nav-link" href=""><i class="fas fa-sliders-h"></i>
+            <a class="nav-link" href="{{ route('program.index') }}"><i class="fas fa-sliders-h"></i>
                 <span>Program</span></a>
         </li>
         <li class="{{ request()->segment(2) == 'album' ? 'active' : '' }}">

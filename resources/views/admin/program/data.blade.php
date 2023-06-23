@@ -3,11 +3,11 @@
 @section('content')
     <section class="section">
         <x-breadcrumb menu="{{ $menu }}"></x-breadcrumb>
-        <x-datatable link="{{ route('post.create') }}">
+        <x-datatable link="{{ route('program.create') }}">
             <th class="text-center"></th>
-            <th>Title</th>
-            <th>Kategori</th>
-            <th>Author</th>
+            <th>Nama Program</th>
+            <th>Cover</th>
+            <th>Penyiar</th>
             <th class="text-center">Action</th>
         </x-datatable>
     </section>
@@ -25,21 +25,21 @@
             });
 
             // Datatable
-            var myTable = DataTable("{{ route('post.index') }}", [{
+            var myTable = DataTable("{{ route('program.index') }}", [{
                     data: "DT_RowIndex",
                     name: "DT_RowIndex",
                 },
                 {
-                    data: "title",
-                    name: "title",
+                    data: "name",
+                    name: "name",
                 },
                 {
-                    data: "category",
-                    name: "category",
+                    data: "cover_image",
+                    name: "cover_image",
                 },
                 {
-                    data: "author",
-                    name: "author",
+                    data: "host",
+                    name: "host",
                 },
                 {
                     data: "action",
@@ -50,9 +50,9 @@
             ]);
 
             // Delete
-            var fitur = "Post";
-            var editUrl = "{{ route('post.index') }}";
-            var deleteUrl = "{{ route('post.store') }}";
+            var fitur = "Program";
+            var editUrl = "{{ route('program.index') }}";
+            var deleteUrl = "{{ route('program.store') }}";
             Delete(fitur, editUrl, deleteUrl, myTable)
         });
     </script>
