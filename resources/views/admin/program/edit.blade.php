@@ -27,6 +27,8 @@
                         <div class="form-group row mb-4">
                             <div class="col-sm-12 col-md-7">
                                 <button class="btn btn-primary">Update Program</button>
+                                <a href="{{ route('profile.index') }}" class="btn btn-danger float-right">
+                                    <i class="fas fa-reply"></i> Back</a>
                             </div>
                         </div>
                     </div>

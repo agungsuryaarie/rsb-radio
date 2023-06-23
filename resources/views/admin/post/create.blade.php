@@ -26,8 +26,10 @@
                             <option value="2" @selected(old('status') == '2')>Draft</option>
                         </x-dropdown>
                         <div class="form-group row mb-4">
-                            <div class="col-sm-12 col-md-7">
+                            <div class="col-sm-12 col-md-12">
                                 <button class="btn btn-primary">Create Post</button>
+                                <a href="{{ route('post.index') }}" class="btn btn-danger float-right">
+                                    <i class="fas fa-reply"></i> Back</a>
                             </div>
                         </div>
                     </div>

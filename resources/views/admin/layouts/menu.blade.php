@@ -24,9 +24,9 @@
                         href="{{ route('category.index') }}">Kategori</a></li>
             </ul>
         </li>
-        <li class="{{ request()->segment(2) == 'playlist' ? 'active' : '' }}">
-            <a class="nav-link" href=""><i class="fas fa-play"></i>
-                <span>Playlist</span></a>
+        <li class="{{ request()->segment(2) == 'event' ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('event.index') }}"><i class="fas fa-calendar"></i>
+                <span>Event</span></a>
         </li>
         <li class="{{ request()->segment(2) == 'program' ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('program.index') }}"><i class="fas fa-sliders-h"></i>

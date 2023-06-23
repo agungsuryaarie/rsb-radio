@@ -22,8 +22,10 @@
                         <x-textarea name="description" label="Deskripsi">{{ old('description') }}</x-textarea>
                         <x-uploadPreview name="cover" oldImage="" label="Cover" fitur="program"></x-uploadPreview>
                         <div class="form-group row mb-4">
-                            <div class="col-sm-12 col-md-7">
+                            <div class="col-sm-12 col-md-12">
                                 <button class="btn btn-primary">Create Program</button>
+                                <a href="{{ route('profile.index') }}" class="btn btn-danger float-right">
+                                    <i class="fas fa-reply"></i> Back</a>
                             </div>
                         </div>
                     </div>

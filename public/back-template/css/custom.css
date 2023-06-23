@@ -51,7 +51,7 @@ input[type=file]::-webkit-file-upload-button{
 
 
 #preview{  
-  max-width:400px;
+  max-width:300px;
   height:auto;
   width:auto;
   display:block;
