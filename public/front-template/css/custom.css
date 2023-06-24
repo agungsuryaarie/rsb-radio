@@ -1,0 +1,386 @@
+ /*---------------------
+  Videos
+-----------------------*/
+.pt-7{
+	padding-top: 4rem;
+}
+.videos {
+	padding-bottom: 90px;
+}
+
+.videos .section-title {
+	margin-bottom: 70px;
+}
+
+.videos__large__item {
+	height: 380px;
+	position: relative;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin-bottom: 30px;
+}
+
+.videos__large__item .play-btn {
+	height: 50px;
+	width: 50px;
+	background: #5c00ce;
+	border-radius: 50%;
+	font-size: 18px;
+	line-height: 50px;
+	text-align: center;
+	display: inline-block;
+	color: #ffffff;
+}
+
+.videos__large__item__text {
+	background: rgba(7, 14, 38, 0.7);
+	padding: 25px 30px 25px;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+}
+
+.videos__large__item__text h4 {
+	color: #ffffff;
+	font-weight: 700;
+}
+
+.videos__large__item__text ul li {
+	font-size: 13px;
+	list-style: none;
+	display: inline-block;
+	margin-right: 18px;
+	color: #ffffff;
+	position: relative;
+}
+
+.videos__large__item__text ul li:after {
+	position: absolute;
+	right: -12px;
+	top: 2px;
+	height: 17px;
+	width: 1px;
+	background: #ffffff;
+	content: "";
+}
+
+.videos__large__item__text ul li:last-child {
+	margin-right: 0;
+}
+
+.videos__large__item__text ul li:last-child:after {
+	display: none;
+}
+
+.videos__item__pic {
+	height: 180px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	align-items: center;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	margin-right: 10px;
+}
+
+.videos__item__pic .play-btn {
+	height: 40px;
+	width: 40px;
+	background: #5c00ce;
+	border-radius: 50%;
+	font-size: 16px;
+	line-height: 40px;
+	text-align: center;
+	display: inline-block;
+	color: #ffffff;
+}
+
+.videos__item__text {
+	padding-top: 20px;
+}
+
+.videos__item__text h5 {
+	font-weight: 700;
+	line-height: 26px;
+	margin-bottom: 5px;
+}
+
+.videos__item__text ul li {
+	font-size: 13px;
+	list-style: none;
+	display: inline-block;
+	margin-right: 18px;
+	/* color: #5c00ce; */
+	position: relative;
+}
+
+.videos__item__text ul li:after {
+	position: absolute;
+	right: -12px;
+	top: 2px;
+	height: 17px;
+	width: 1px;
+	background: #888888;
+	content: "";
+}
+
+.videos__item__text ul li:last-child {
+	margin-right: 0;
+	/* color: #888888; */
+}
+
+.videos__item__text ul li:last-child:after {
+	display: none;
+}
+
+.videos__slider .col-videos {
+	max-width: 100%;
+}
+
+.videos__slider.owl-carousel .owl-nav button {
+	font-size: 18px;
+	color: #888888;
+	height: 50px;
+	width: 25px;
+	background: #ffffff;
+	line-height: 50px;
+	position: absolute;
+	left: 15px;
+	top: 22%;
+}
+
+.videos__slider.owl-carousel .owl-nav button.owl-next {
+	left: auto;
+	right: 15px;
+}
+
+.set-bg {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+}
+
+.blog__item__pic img {
+	height: auto;
+	padding: 10px;
+}
+
+.img-baner{
+	max-width: 100%;
+    /* height: 310px; */
+    object-fit: cover;
+    object-position: center;
+}
+
+/*---------------------
+  Track
+-----------------------*/
+.section-title {
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+.section-title h2 {
+	font-size: 42px;
+	/* color: #111111; */
+	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.section-title h1 {
+	font-size: 100px;
+	color: #f2f2f2;
+	font-family: "Rockville Solid Regular";
+	position: absolute;
+	left: 0;
+	top: -45px;
+	width: 100%;
+	z-index: -1;
+}
+.track {
+	padding-top: 120px;
+	padding-bottom: 40px;
+	overflow: hidden;
+}
+
+.track .section-title {
+	margin-bottom: 105px;
+}
+
+.track__content {
+	height: 502px;
+	overflow-y: auto;
+}
+
+.track__all {
+	text-align: right;
+	margin-bottom: 100px;
+}
+
+.jp-play {
+	position: relative;
+	height: 50px;
+	width: 50px;
+	background: transparent;
+	border: 2px solid #e1e1e1;
+	border-radius: 50%;
+}
+
+.jp-play:after {
+	position: absolute;
+	display: block;
+	left: 17px;
+	top: 12px;
+	width: 16px;
+	height: 20px;
+	background: url(../images/play-default.png);
+	content: "";
+}
+
+.jp-state-playing .jp-play {
+	background: #5c00ce !important;
+	border-color: #5c00ce !important;
+}
+
+.jp-state-playing .jp-play:after {
+	background: url(../images/pause.png) !important;
+	left: 15px;
+	top: 12px;
+}
+
+.jp-audio .jp-play:focus {
+	background: #5c00ce !important;
+	border-color: #5c00ce !important;
+}
+
+.jp-audio .jp-play:focus:after {
+	background: url(../img/play.png);
+}
+
+.jp-seek-bar>div {
+	height: 5px;
+	background: #e1e1e1;
+	cursor: pointer;
+	width: 245px;
+}
+
+.player_bars {
+	width: 350px;
+	display: table;
+	padding-left: 50px;
+	position: relative;
+	padding-top: 25px;
+	float: left;
+	margin-right: 30px;
+}
+
+.jp-play-bar {
+	position: relative;
+	height: 100%;
+	background: #5c00ce;
+	overflow: visible !important;
+}
+
+.jp-current-time {
+	font-size: 15px;
+	/* color: #111111; */
+	position: absolute;
+	left: -50px;
+	top: -9px;
+}
+
+.jp-duration {
+	font-size: 15px;
+	/* color: #111111; */
+	position: absolute;
+	right: 0;
+	top: 16px;
+}
+
+.player_controls_box {
+	width: 50px;
+	float: left;
+	margin-right: 20px;
+}
+
+.jp-mute {
+	font-size: 18px;
+	border: none;
+	background: none;
+	color: #111111;
+	position: absolute;
+	left: 0;
+	top: 13px;
+}
+
+.jp-volume-bar {
+	height: 5px;
+	width: 70px;
+	background: #e1e1e1;
+	cursor: pointer;
+}
+
+.jp-volume-bar-value {
+	background: #5c00ce;
+	height: 100%;
+}
+
+.jp-volume-controls {
+	position: relative;
+	width: 95px;
+	float: left;
+	padding-left: 30px;
+	padding-top: 25px;
+}
+
+.single_player_container {
+	overflow: hidden;
+	margin-bottom: 40px;
+}
+
+.single_player_container:last-child {
+	margin-bottom: 0;
+}
+
+.single_player_container h4 {
+	font-size: 26px;
+	/* color: #111111; */
+	font-weight: 700;
+	margin-bottom: 20px;
+	text-transform: uppercase;
+}
+
+.track__pic {
+	position: relative;
+	z-index: 1;
+}
+
+.track__pic:after {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #f5f5f5;
+	content: "";
+	z-index: -1;
+}
+
+.track__pic img {
+	position: relative;
+	top: -50px;
+	width: calc(100% - 40px);
+	margin-left: 40px;
+	height: 502px;
+}
