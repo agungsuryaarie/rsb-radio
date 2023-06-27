@@ -40,18 +40,16 @@
                     </ul>
                 </div>
             </div>
-            <div class="col-lg-4">
-            </div>
         </div>
-
+        <div class="d-flex justify-content-center">
+            <img src="{{ 'front-template/images/logo.png' }}" style="width: 150px">
+        </div>
         <div class="row mt-5">
             <div class="col-12 text-center">
                 <p>Copyright &copy;
                     <script>
                         document.write(new Date().getFullYear());
-                    </script>. All Rights Reserved. &mdash; Designed with love by <a
-                        href="https://untree.co">Untree.co</a> Distributed by <a
-                        href="https://themewagon.com">ThemeWagon</a>
+                    </script>. Dinas Komunikasi dan Informatika Kab. Batu bara.
             </div>
         </div>
     </div>

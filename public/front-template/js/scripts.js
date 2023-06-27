@@ -30,15 +30,9 @@
     setTheme(getPreferredTheme())
 
     const showActiveTheme = (theme, focus = false) => {
-        const themeSwitcher = document.querySelector('#bd-theme')
 
-        if (!themeSwitcher) {
-            return
-        }
-
-        const themeSwitcherText = document.querySelector('#bd-theme-text')
         const activeThemeIcon = document.querySelector('.theme-icon-active')
-        const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+        const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`);
         const iconOfActiveBtn = btnToActive.querySelector('i').dataset.themeIcon
 
         document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
@@ -52,12 +46,6 @@
         activeThemeIcon.classList.add(iconOfActiveBtn)
         activeThemeIcon.dataset.iconActive = iconOfActiveBtn
 
-        const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
-        themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
-
-        if (focus) {
-            themeSwitcher.focus()
-        }
     }
 
     window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {

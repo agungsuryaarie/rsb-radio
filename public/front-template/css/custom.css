@@ -2,7 +2,7 @@
   Videos
 -----------------------*/
 .pt-7{
-	padding-top: 4rem;
+	padding-top: 5rem;
 }
 .videos {
 	padding-bottom: 90px;
@@ -45,6 +45,7 @@
 	position: absolute;
 	left: 0;
 	bottom: 0;
+	z-index: 1;
 	width: 100%;
 }
 

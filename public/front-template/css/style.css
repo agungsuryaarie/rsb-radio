@@ -16,6 +16,7 @@
 :root {
   --bs-deepdark: #20232a;
   --bs-dark: #282c34;
+  --bs-gray-500: #545556;
   --bs-purple: #5c00ce;
   /* --bs-blue: #306EE8;
   --bs-indigo: #6610f2;
@@ -2506,7 +2507,7 @@ textarea.form-control-lg {
   -ms-user-select: none;
   user-select: none;
   background-color: transparent;
-  border: 1px solid transparent;
+  /* border: 1px solid transparent; */
   padding: 0.375rem 0.75rem;
   font-size: 1rem;
   border-radius: 0.25rem;
@@ -3222,7 +3223,7 @@ textarea.form-control-lg {
   .dropdown-item.active, .dropdown-item:active {
     color: #fff;
     text-decoration: none;
-    background-color: #214252; }
+    background-color: var(--bs-dark); }
   .dropdown-item.disabled, .dropdown-item:disabled {
     color: #adb5bd;
     pointer-events: none;
@@ -3375,7 +3376,7 @@ textarea.form-control-lg {
 
 .nav-link {
   display: block;
-  padding: 0.5rem 1rem;
+  /* padding: 0.5rem 1rem; */
   /* color: #214252; */
   text-decoration: none;
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out;
@@ -9994,9 +9995,12 @@ textarea {
 
 .posts-entry .blog-entry h2, .posts-entry .blog-entry .h2 {
   line-height: 1.3;
-  font-size: 26px; }
+  font-size: 22px;
+  font-weight: 600;
+ }
   .posts-entry .blog-entry h2 a, .posts-entry .blog-entry .h2 a {
-    color: #323131; }
+    /* color: #323131; */
+   }
 
 .posts-entry .btn-sm, .posts-entry .btn-group-sm > .btn {
   padding-top: 10px;
@@ -10010,7 +10014,8 @@ textarea {
 .posts-entry .blog-entry-sm h3, .posts-entry .blog-entry-sm .h3 {
   font-size: 20px; }
   .posts-entry .blog-entry-sm h3 a, .posts-entry .blog-entry-sm .h3 a {
-    color: #4D4C7D; }
+    /* color: #4D4C7D; */
+   }
 
 .posts-entry.posts-entry-sm .blog-entry h2, .posts-entry.posts-entry-sm .blog-entry .h2 {
   font-size: 18px; }
@@ -10116,7 +10121,8 @@ textarea {
   font-size: 15px;
   width: 100%;
   float: left;
-  background: #fff; }
+  /* background: #fff; */
+ }
   .sidebar-box *:last-child {
     margin-bottom: 0; }
   .sidebar-box .heading {
@@ -10477,7 +10483,7 @@ textarea {
     position: relative;
     display: inline-block; }
     .site-footer a:hover {
-      /* color: #fff;  */
+      color: #fff; 
     }
   .site-footer .footer-cta h2, .site-footer .footer-cta .h2 {
     font-size: 30px;
@@ -10507,7 +10513,7 @@ textarea {
       height: 40px;
       position: relative;
       background: #fff;
-      border-radius: 4px;
+      border-radius: 25px;
       color: #214252; }
       .site-footer .social li a:before {
         display: none; }

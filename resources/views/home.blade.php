@@ -2,13 +2,11 @@
 
 
 @section('content')
-    <div class="section">
-        <div class="container pt-7">
-            <div class="row align-items-stretch retro-layout-alt">
-                <div class="col-md-12">
-                    <a href="single.html" class="img-link"><img src="{{ 'front-template/images/baner2.png' }}" alt="Image"
-                            class="img-baner"></a>
-                </div>
+    <div class="container pt-7">
+        <div class="row align-items-stretch retro-layout-alt">
+            <div class="col-md-12">
+                <a href="single.html" class="img-link"><img src="{{ 'front-template/images/baner2.png' }}" alt="Image"
+                        class="img-baner"></a>
             </div>
         </div>
     </div>
@@ -188,11 +186,11 @@
                         </div>
                         <div class="single_player_container">
                             <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_2" data-url="music-files/2.mp3"
-                                id="jp_jplayer_1" style="width: 0px; height: 0px;"><img id="jp_poster_1"
+                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_2"
+                                data-url="{{ 'front-template/music-files/1.mp3' }}" id="jp_jplayer_1"
+                                style="width: 0px; height: 0px;"><img id="jp_poster_1"
                                     style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_1"
-                                    preload="metadata"
-                                    src="file:///C:/Users/ASUS/Downloads/Djoz-master/Djoz-master/music-files/2.mp3"></audio>
+                                    preload="metadata" src="{{ 'front-template/music-files/1.mp3' }}"></audio>
                             </div>
                             <div class="jp-audio jp_container_2" role="application" aria-label="media player">
                                 <div class="jp-gui jp-interface">

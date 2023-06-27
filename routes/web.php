@@ -19,7 +19,13 @@ use App\Http\Controllers\Admin\UserController;
 */
 
 Route::get('/', function () {
-    return view('beranda');
+    return view('home');
+});
+Route::get('/news', function () {
+    return view('news');
+});
+Route::get('/events', function () {
+    return view('events');
 });
 
 Auth::routes();
