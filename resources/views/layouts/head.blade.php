@@ -39,5 +39,5 @@
     <link rel="stylesheet" href="{{ url('front-template/css/flatpickr.min.css') }}">
 
 
-    <title>Blogy &mdash; Free Bootstrap 5 Website Template by Untree.co</title>
+    <title>Radio Suara Batu Bara</title>
 </head>
