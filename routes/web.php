@@ -30,6 +30,15 @@ Route::get('/events', function () {
 Route::get('/watch', function () {
     return view('watch');
 });
+Route::get('/playlist', function () {
+    return view('playlist');
+});
+Route::get('/galeri', function () {
+    return view('galeri');
+});
+Route::get('/galeri_show', function () {
+    return view('galeri_show');
+});
 
 Auth::routes();
 

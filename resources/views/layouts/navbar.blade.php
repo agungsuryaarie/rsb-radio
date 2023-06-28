@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top"data-navbar-on-scroll="data-navbar-on-scroll">
     <div class="container">
-        <a href="index.html" class="logo m-0 float-start"><img src="{{ 'front-template/images/logo.png' }}"
+        <a href="index.html" class="logo m-0 float-start"><img src="{{ 'front-template/images/logo-black.png' }}"
                 style="width: 80px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,13 +18,13 @@
                     <a class="nav-link active" aria-current="page" href="#">Listen</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="">Playlist</a>
+                    <a class="nav-link active" aria-current="page" href="/playlist">Playlist</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/watch">Watch</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Media</a>
+                    <a class="nav-link active" aria-current="page" href="/galeri">Galeri</a>
                 </li>
                 <li class="nav-item me-2">
                     <a class="nav-link active" aria-current="page" href="/events">Events</a>

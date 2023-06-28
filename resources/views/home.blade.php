@@ -2,21 +2,23 @@
 
 
 @section('content')
-    {{-- <div class="container pt-7">
+    <div class="container pt-2">
         <div class="row align-items-stretch retro-layout-alt">
             <div class="col-md-12">
                 <a href="single.html" class="img-link"><img src="{{ 'front-template/images/baner2.png' }}" alt="Image"
                         class="img-baner"></a>
             </div>
         </div>
-    </div> --}}
+    </div>
+
 
     <section class="section bg-body-tertiary ">
         <div class="container">
             <div class="row align-items-stretch retro-layout">
                 <div class="col-md-6">
                     <a href="single.html" class="h-entry img-5 b-height gradient">
-                        <div class="featured-img" style="background-image: url('{{ 'front-template/images/tour-2.jpg' }}');">
+                        <div class="featured-img"
+                            style="background-image: url('{{ 'front-template/images/tour-2.jpg' }}');">
                         </div>
                         <div class="videos__large__item__text">
                             <h4>Martin Garrix & Pierce Fulton feat. Mike Shinoda - Waiting For Tomorrow (Official Video)
@@ -92,8 +94,6 @@
                         <a href="single.html" class="img-link">
                             <img src="{{ 'front-template/images/1.png' }}" alt="Image" class="img-fluid">
                         </a>
-                        <span class="date">Apr. 14th, 2022</span>
-                        <h2><a href="single.html">Thought you loved Python? Wait until you meet Rust</a></h2>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
@@ -101,8 +101,6 @@
                         <a href="single.html" class="img-link">
                             <img src="{{ 'front-template/images/2.jpg' }}" alt="Image" class="img-fluid">
                         </a>
-                        <span class="date">Apr. 14th, 2022</span>
-                        <h2><a href="single.html">Startup vs corporate: What job suits you best?</a></h2>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
@@ -110,8 +108,6 @@
                         <a href="single.html" class="img-link">
                             <img src="{{ 'front-template/images/3.png' }}" alt="Image" class="img-fluid">
                         </a>
-                        <span class="date">Apr. 14th, 2022</span>
-                        <h2><a href="single.html">UK sees highest inflation in 30 years</a></h2>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-3">
@@ -119,8 +115,6 @@
                         <a href="single.html" class="img-link">
                             <img src="{{ 'front-template/images/4.png' }}" alt="Image" class="img-fluid">
                         </a>
-                        <span class="date">Apr. 14th, 2022</span>
-                        <h2><a href="single.html">Don’t assume your user data in the cloud is safe</a></h2>
                     </div>
                 </div>
             </div>
@@ -138,12 +132,12 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="track__all">
-                        <a href="#" class="primary-btn border-btn">View all tracks</a>
+                        <a href="/playlist" class="primary-btn border-btn">View all tracks</a>
                     </div>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 col-md-6 col-sm-6">
+                <div class="col-lg-6 col-md-6 col-sm-6 mb-100">
                     <div class="title-entry">
                         <h3>NEW ENTRY</h3>
                         <p>Edition : 30 Juni 2023</p>

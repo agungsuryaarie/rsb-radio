@@ -49,7 +49,7 @@
                 <p>Copyright &copy;
                     <script>
                         document.write(new Date().getFullYear());
-                    </script>. Dinas Komunikasi dan Informatika Kab. Batu bara.
+                    </script>. Radio Suara Batu Bara FM 89.3
             </div>
         </div>
     </div>
