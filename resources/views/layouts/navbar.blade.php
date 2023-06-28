@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm fixed-top">
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top"data-navbar-on-scroll="data-navbar-on-scroll">
     <div class="container">
         <a href="index.html" class="logo m-0 float-start"><img src="{{ 'front-template/images/logo.png' }}"
                 style="width: 80px"></a>
@@ -18,16 +18,19 @@
                     <a class="nav-link active" aria-current="page" href="#">Listen</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Watch</a>
+                    <a class="nav-link active" aria-current="page" href="">Playlist</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/watch">Watch</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="#">Media</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item me-2">
                     <a class="nav-link active" aria-current="page" href="/events">Events</a>
                 </li>
 
-                <li class="nav-item dropdown">
+                {{-- <li class="nav-item dropdown">
                     <button class="btn nav-link dropdown-toggle me-3" type="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
                         <i class="bi bi-sun-fill theme-icon-active" data-theme-icon-active="bi-sun-fill"></i>
@@ -48,17 +51,18 @@
                                 Dark
                             </button>
                         </li>
-                        {{-- <li>
+                        <li>
                             <button class="dropdown-item d-flex align-items-center" type="button"
                                 data-bs-theme-value="auto">
                                 <i class="bi bi-circle-half me-2 opacity-50" data-theme-icon="bi-circle-half"></i>
                                 Auto
                             </button>
-                        </li> --}}
+                        </li>
                     </ul>
-                </li>
+                </li> --}}
                 <form class="d-flex" role="search">
-                    <button class="btn btn-outline btn-sm me-2" href="/login">Sign in</button>
+                    <button class="btn btn-outline-dark btn-sm border border-secondary me-2" href="/login">Sign
+                        in</button>
                     <button class="btn btn-primary btn-sm me-2"><i class="bi bi-person-plus"></i> Sign up</button>
                 </form>
             </ul>

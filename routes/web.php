@@ -27,6 +27,9 @@ Route::get('/news', function () {
 Route::get('/events', function () {
     return view('events');
 });
+Route::get('/watch', function () {
+    return view('watch');
+});
 
 Auth::routes();
 

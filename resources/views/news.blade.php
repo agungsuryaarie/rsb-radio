@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="section search-result-wrap">
-        <div class="container pt-7 ">
+        <div class="container pt-5">
             <div class="row posts-entry">
                 <div class="col-lg-8">
                     <div class="blog-entry d-flex blog-entry-search-item">
@@ -15,7 +15,6 @@
                                     Rust</a></h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel
                                 voluptas.</p>
-                            <p><a href="single.html" class="btn btn-sm btn-outline-primary">Read More</a></p>
                         </div>
                     </div>
 
@@ -29,7 +28,6 @@
                                     Rust</a></h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel
                                 voluptas.</p>
-                            <p><a href="single.html" class="btn btn-sm btn-outline-primary">Read More</a></p>
                         </div>
                     </div>
 
@@ -43,7 +41,6 @@
                                     Rust</a></h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel
                                 voluptas.</p>
-                            <p><a href="single.html" class="btn btn-sm btn-outline-primary">Read More</a></p>
                         </div>
                     </div>
 
@@ -57,7 +54,6 @@
                                     Rust</a></h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel
                                 voluptas.</p>
-                            <p><a href="single.html" class="btn btn-sm btn-outline-primary">Read More</a></p>
                         </div>
                     </div>
 
@@ -71,7 +67,6 @@
                                     Rust</a></h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel
                                 voluptas.</p>
-                            <p><a href="single.html" class="btn btn-sm btn-outline-primary">Read More</a></p>
                         </div>
                     </div>
 

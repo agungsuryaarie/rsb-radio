@@ -76,7 +76,7 @@
         autoplay: true,
         responsive: {
             992: {
-                items: 7,
+                items: 6,
             },
             768: {
                 items: 3,

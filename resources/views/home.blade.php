@@ -12,7 +12,7 @@
     </div> --}}
 
     <section class="section bg-body-tertiary ">
-        <div class="container pt-7">
+        <div class="container">
             <div class="row align-items-stretch retro-layout">
                 <div class="col-md-6">
                     <a href="single.html" class="h-entry img-5 b-height gradient">
@@ -78,7 +78,7 @@
     <!-- End retroy layout blog posts -->
 
     <!-- Start posts-entry -->
-    <section class="section posts-entry posts-entry-sm bg-body-tertiary ">
+    <section class="section posts-entry posts-entry-sm">
         <div class="container">
             <div class="row mb-4">
                 <div class="col-sm-6">
@@ -127,13 +127,13 @@
         </div>
     </section>
 
-    <section class="track spad">
+    <section class="section track spad youtube spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
                     <div class="section-title">
-                        <h2>Latest tracks</h2>
-                        <h1>Music podcast</h1>
+                        <h2>Playlist Tracks</h2>
+                        <h1>Playlist Tracks</h1>
                     </div>
                 </div>
                 <div class="col-lg-5">
@@ -143,7 +143,70 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-7 p-0">
+                <div class="col-lg-6 col-md-6 col-sm-6">
+                    <div class="title-entry">
+                        <h3>NEW ENTRY</h3>
+                        <p>Edition : 30 Juni 2023</p>
+                    </div>
+                    <div class="track__content nice-scroll" tabindex="1" style="overflow-y: hidden; outline: none;">
+                        <div class="youtube__item">
+                            <div class="youtube__item__pic set-bg" data-setbg="{{ 'front-template/images/dj-1.jpg' }}"
+                                style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
+                                <a href="https://www.youtube.com/watch?v=FXU0uy0GAQM" class="play-btn video-popup"><i
+                                        class="fa fa-play"></i></a>
+                            </div>
+                            <div class="youtube__item__text">
+                                <h4>David Guetta Miami Ultra Music Festival 2019</h4>
+                                <i class="bi bi-youtube"></i> Rianta Surbakti
+                            </div>
+                        </div>
+                        <div class="youtube__item">
+                            <div class="youtube__item__pic set-bg" data-setbg="{{ 'front-template/images/dj-2.jpg' }}"
+                                style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
+                                <a href="https://www.youtube.com/watch?v=7Boy7DHbcvc" class="play-btn video-popup"><i
+                                        class="fa fa-play"></i></a>
+                            </div>
+                            <div class="youtube__item__text">
+                                <h4>David Guetta Miami Ultra Music Festival 2019</h4>
+                                <i class="bi bi-youtube"></i> Rianta Surbakti
+                            </div>
+                        </div>
+                        <div class="youtube__item">
+                            <div class="youtube__item__pic set-bg"
+                                data-setbg="{{ 'front-template/images/img-video.jpg' }}"
+                                style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
+                                <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
+                                    class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                            </div>
+                            <div class="youtube__item__text">
+                                <h4>David Guetta Miami Ultra Music Festival 2019</h4>
+                            </div>
+                        </div>
+                        <div class="youtube__item">
+                            <div class="youtube__item__pic set-bg"
+                                data-setbg="{{ 'front-template/images/img-video.jpg' }}"
+                                style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
+                                <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
+                                    class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                            </div>
+                            <div class="youtube__item__text">
+                                <h4>David Guetta Miami Ultra Music Festival 2019</h4>
+                            </div>
+                        </div>
+                        <div class="youtube__item">
+                            <div class="youtube__item__pic set-bg"
+                                data-setbg="{{ 'front-template/images/img-video.jpg' }}"
+                                style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
+                                <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
+                                    class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                            </div>
+                            <div class="youtube__item__text">
+                                <h4>David Guetta Miami Ultra Music Festival 2019</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{-- <div class="col-lg-6 p-0">
                     <div class="track__content nice-scroll" tabindex="1" style="overflow-y: hidden; outline: none;">
                         <div class="single_player_container">
                             <h4>David Guetta Miami Ultra</h4>
@@ -374,10 +437,10 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-lg-5 p-0">
-                    <div class="track__pic">
-                        <img src="{{ 'front-template/images/track-right.jpg' }}" alt="">
+                </div> --}}
+                <div class="col-lg-6 p-0 order-lg-2">
+                    <div class="tours__item__pic">
+                        <img src="{{ 'front-template/images/tour-1.jpg' }}" alt="">
                     </div>
                 </div>
             </div>

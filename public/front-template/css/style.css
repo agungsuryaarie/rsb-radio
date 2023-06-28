@@ -3516,6 +3516,11 @@ textarea.form-control-lg {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem; }
 
+  .backdrop {
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
 .navbar-collapse {
   -ms-flex-preferred-size: 100%;
   flex-basis: 100%;
