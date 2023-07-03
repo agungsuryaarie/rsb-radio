@@ -1,34 +1,71 @@
-<nav class="site-nav">
+<nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top"data-navbar-on-scroll="data-navbar-on-scroll">
     <div class="container">
-        <div class="menu-bg-wrap">
-            <div class="site-navigation">
-                <div class="row g-0 align-items-center">
-                    <div class="col-2">
-                        <a href="index.html" class="logo m-0 float-start">Blogy<span class="text-primary">.</span></a>
-                    </div>
-                    <div class="col-8 text-center">
-                        <ul class="js-clone-nav d-none d-lg-inline-block text-start site-menu mx-auto">
-                            <li class="active"><a href="index.html">Home</a></li>
-                            <li class="has-children">
-                                <a href="category.html">Pages</a>
-                                <ul class="dropdown">
-                                    <li><a href="search-result.html">Search Result</a></li>
-                                    <li><a href="blog.html">Blog</a></li>
-                                </ul>
-                            </li>
-                            <li><a href="category.html">Culture</a></li>
-                            <li><a href="category.html">Business</a></li>
-                            <li><a href="category.html">Politics</a></li>
-                        </ul>
-                    </div>
-                    <div class="col-2 text-end">
-                        <a href="#"
-                            class="burger ms-auto float-end site-menu-toggle js-menu-toggle d-inline-block d-lg-none light">
-                            <span></span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+        <a href="index.html" class="logo m-0 float-start"><img src="{{ 'front-template/images/logo-black.png' }}"
+                style="width: 80px"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/news">News</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Listen</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/playlist">Playlist</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/watch">Watch</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/galeri">Galeri</a>
+                </li>
+                <li class="nav-item me-2">
+                    <a class="nav-link active" aria-current="page" href="/events">Events</a>
+                </li>
+
+                {{-- <li class="nav-item dropdown">
+                    <button class="btn nav-link dropdown-toggle me-3" type="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        <i class="bi bi-sun-fill theme-icon-active" data-theme-icon-active="bi-sun-fill"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-end">
+                        <li>
+                            <button class="dropdown-item d-flex align-items-center" type="button"
+                                data-bs-theme-value="light">
+                                <i class="bi bi-sun-fill me-2 opacity-50" data-theme-icon="bi-sun-fill"></i>
+                                Light
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item d-flex align-items-center" type="button"
+                                data-bs-theme-value="dark">
+                                <i class="bi bi-moon-stars-fill me-2 opacity-50"
+                                    data-theme-icon="bi-moon-stars-fill"></i>
+                                Dark
+                            </button>
+                        </li>
+                        <li>
+                            <button class="dropdown-item d-flex align-items-center" type="button"
+                                data-bs-theme-value="auto">
+                                <i class="bi bi-circle-half me-2 opacity-50" data-theme-icon="bi-circle-half"></i>
+                                Auto
+                            </button>
+                        </li>
+                    </ul>
+                </li> --}}
+                <form class="d-flex" role="search">
+                    <button class="btn btn-outline-dark btn-sm border border-secondary me-2" href="/login">Sign
+                        in</button>
+                    <button class="btn btn-primary btn-sm me-2"><i class="bi bi-person-plus"></i> Sign up</button>
+                </form>
+            </ul>
         </div>
     </div>
 </nav>

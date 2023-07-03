@@ -4,7 +4,6 @@
 @include('layouts.head')
 
 <body>
-
     <div class="site-mobile-menu site-navbar-target">
         <div class="site-mobile-menu-header">
             <div class="site-mobile-menu-close">
@@ -19,3 +18,9 @@
     @yield('content')
 
     @include('layouts.footer')
+
+    @yield('script')
+
+</body>
+
+</html>

@@ -23,7 +23,25 @@ use App\Http\Controllers\Admin\UserController;
 */
 
 Route::get('/', function () {
-    return view('beranda');
+    return view('home');
+});
+Route::get('/news', function () {
+    return view('news');
+});
+Route::get('/events', function () {
+    return view('events');
+});
+Route::get('/watch', function () {
+    return view('watch');
+});
+Route::get('/playlist', function () {
+    return view('playlist');
+});
+Route::get('/galeri', function () {
+    return view('galeri');
+});
+Route::get('/galeri_show', function () {
+    return view('galeri_show');
 });
 
 Auth::routes();
