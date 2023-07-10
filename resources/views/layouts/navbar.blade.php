@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-light shadow-sm sticky-top"data-navbar-on-scroll="data-navbar-on-scroll">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top"data-navbar-on-scroll="data-navbar-on-scroll">
     <div class="container">
         <a href="index.html" class="logo m-0 float-start"><img src="{{ 'front-template/images/logo-black.png' }}"
-                style="width: 80px"></a>
+                style="width: 85px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -60,12 +60,14 @@
                         </li>
                     </ul>
                 </li> --}}
-                <form class="d-flex" role="search">
-                    <button class="btn btn-outline-dark btn-sm border border-secondary me-2" href="/login">Sign
-                        in</button>
-                    <button class="btn btn-primary btn-sm me-2"><i class="bi bi-person-plus"></i> Sign up</button>
-                </form>
             </ul>
+            <div class="navbar-cta" role="search">
+                <button class="btn btn-outline-primary border-purple me-2 text-bold" href="/events">Sign
+                    in</button>
+                <button class="btn btn-outline-primary border-purple me-2 text-purple" href="/login"><i
+                        class="bi bi-person-plus"></i>
+                    Sign up</button>
+            </div>
         </div>
     </div>
 </nav>

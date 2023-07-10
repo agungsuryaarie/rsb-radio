@@ -11,7 +11,7 @@
                         </a>
                         <div>
                             <span class="date">Apr. 14th, 2022</span>
-                            <h2><a class="nav-link active" href="#">Thought you loved Python? Wait until you meet
+                            <h2><a class="nav-link active" href="/news_show">Thought you loved Python? Wait until you meet
                                     Rust</a></h2>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde, nobis ea quis inventore vel
                                 voluptas.</p>

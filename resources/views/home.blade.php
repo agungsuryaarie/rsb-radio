@@ -2,23 +2,22 @@
 
 
 @section('content')
-    <div class="container pt-2">
+    {{-- <div class="container pt-2">
         <div class="row align-items-stretch retro-layout-alt">
             <div class="col-md-12">
                 <a href="single.html" class="img-link"><img src="{{ 'front-template/images/baner2.png' }}" alt="Image"
                         class="img-baner"></a>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 
-    <section class="section bg-body-tertiary ">
+    <section class="section bg-primary-50">
         <div class="container">
             <div class="row align-items-stretch retro-layout">
-                <div class="col-md-6">
+                <div class="col-md-5">
                     <a href="single.html" class="h-entry img-5 b-height gradient">
-                        <div class="featured-img"
-                            style="background-image: url('{{ 'front-template/images/tour-2.jpg' }}');">
+                        <div class="featured-img" style="background-image: url('{{ 'front-template/images/tour-2.jpg' }}');">
                         </div>
                         <div class="videos__large__item__text">
                             <h4>Martin Garrix & Pierce Fulton feat. Mike Shinoda - Waiting For Tomorrow (Official Video)
@@ -30,7 +29,7 @@
                         </div>
                     </a>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-4">
                     <a href="single.html" class="h-entry mb-30 v-height gradient">
                         <div class="featured-img"
                             style="background-image: url('{{ 'front-template/images/tour-1.jpg' }}');">
@@ -80,7 +79,7 @@
     <!-- End retroy layout blog posts -->
 
     <!-- Start posts-entry -->
-    <section class="section posts-entry posts-entry-sm">
+    <section class="section posts-entry posts-entry-sm bg-primary-50">
         <div class="container">
             <div class="row mb-4">
                 <div class="col-sm-6">
@@ -505,7 +504,7 @@
         </div>
     </section>
 
-    <div class="section bg-body-tertiary ">
+    <div class="section bg-primary-50">
         <div class="container">
             <div class="row mb-4">
                 <div class="col-sm-6">

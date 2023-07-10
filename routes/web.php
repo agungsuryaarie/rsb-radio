@@ -24,6 +24,9 @@ Route::get('/', function () {
 Route::get('/news', function () {
     return view('news');
 });
+Route::get('/news_show', function () {
+    return view('news_show');
+});
 Route::get('/events', function () {
     return view('events');
 });
@@ -41,9 +44,6 @@ Route::get('/galeri_show', function () {
 });
 
 Auth::routes();
-
-
-
 Route::prefix('admin')->middleware('role:1')->group(function () {
     Route::get('/home', [HomeController::class, 'index'])->name('home');
     Route::resource('/post', PostController::class);
