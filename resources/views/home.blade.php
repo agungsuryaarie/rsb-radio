@@ -12,74 +12,54 @@
     </div> --}}
 
 
-    <section class="section bg-primary-50">
+    <section class="section bg-body-tertiary">
         <div class="container">
             <div class="row align-items-stretch retro-layout">
-                <div class="col-md-5">
-                    <a href="single.html" class="h-entry img-5 b-height gradient">
-                        <div class="featured-img" style="background-image: url('{{ 'front-template/images/tour-2.jpg' }}');">
-                        </div>
-                        <div class="videos__large__item__text">
-                            <h4>Martin Garrix & Pierce Fulton feat. Mike Shinoda - Waiting For Tomorrow (Official Video)
-                            </h4>
-                            <ul>
-                                <li>02:35:18</li>
-                                <li>Dec 17, 2019</li>
-                            </ul>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="single.html" class="h-entry mb-30 v-height gradient">
-                        <div class="featured-img"
-                            style="background-image: url('{{ 'front-template/images/tour-1.jpg' }}');">
-                        </div>
+                @foreach ($post as $p)
+                    <div class="col-md-6">
+                        <a href="single.html" class="h-entry img-5 b-height gradient">
+                            <div class="featured-img" style="background-image: url('{{ url('storage/post', $p->image) }}');">
+                            </div>
+                            <div class="videos__large__item__text">
+                                <h4>{{ $p->title }}</h4>
+                                <ul>
+                                    <li>02:35:18</li>
+                                    <li>Dec 17, 2019</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
 
-                        <div class="text">
-                            <span class="date">Apr. 14th, 2022</span>
-                            <h2>AI can now kill those annoying cookie pop-ups</h2>
-                        </div>
-                    </a>
-                    <a href="single.html" class="h-entry mb-30 v-height gradient">
-                        <div class="featured-img"
-                            style="background-image: url('{{ 'front-template/images/tour-3.jpg' }}');">
-                        </div>
-
-                        <div class="text">
-                            <span class="date">Apr. 14th, 2022</span>
-                            <h2>Don’t assume your user data in the cloud is safe</h2>
-                        </div>
-                    </a>
-                </div>
                 <div class="col-md-3">
-                    <a href="single.html" class="h-entry mb-30 v-height gradient">
-
-                        <div class="featured-img"
-                            style="background-image: url('{{ 'front-template/images/tour-4.jpg' }}');"></div>
-
-                        <div class="text">
-                            <span class="date">Apr. 14th, 2022</span>
-                            <h2>Startup vs corporate: What job suits you best?</h2>
-                        </div>
-                    </a>
-                    <a href="single.html" class="h-entry v-height gradient">
-
-                        <div class="featured-img"
-                            style="background-image: url('{{ 'front-template/images/tour-5.jpg' }}');"></div>
-
-                        <div class="text">
-                            <span class="date">Apr. 14th, 2022</span>
-                            <h2>Thought you loved Python? Wait until you meet Rust</h2>
-                        </div>
-                    </a>
+                    @foreach ($latest as $l)
+                        <a href="single.html" class="h-entry mb-30 v-height gradient">
+                            <div class="featured-img"
+                                style="background-image: url('{{ url('storage/post', $l->image) }}');">
+                            </div>
+                            <div class="text">
+                                <span class="date">Apr. 14th, 2022</span>
+                                <h2>{{ $l->title }}</h2>
+                            </div>
+                        </a>
+                    @endforeach
                 </div>
+                {{-- <div class="col-md-3">
+                    <a href="single.html" class="h-entry mb-30 v-height gradient">
+                        <div class="featured-img" style="background-image: url('{{ 'front-template/images/1.png' }}');">
+                        </div>
+                        <div class="text">
+                            <span class="date">Apr. 14th, 2022</span>
+                            <h2> fdgf</h2>
+                        </div>
+                    </a>
+                </div> --}}
             </div>
         </div>
     </section>
-    <!-- End retroy layout blog posts -->
 
     <!-- Start posts-entry -->
-    <section class="section posts-entry posts-entry-sm bg-primary-50">
+    <section class="section posts-entry posts-entry-sm bg-body-tertiary">
         <div class="container">
             <div class="row mb-4">
                 <div class="col-sm-6">
@@ -165,8 +145,7 @@
                             </div>
                         </div>
                         <div class="youtube__item">
-                            <div class="youtube__item__pic set-bg"
-                                data-setbg="{{ 'front-template/images/img-video.jpg' }}"
+                            <div class="youtube__item__pic set-bg" data-setbg="{{ 'front-template/images/img-video.jpg' }}"
                                 style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
                                 <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
                                     class="play-btn video-popup"><i class="fa fa-play"></i></a>
@@ -176,8 +155,7 @@
                             </div>
                         </div>
                         <div class="youtube__item">
-                            <div class="youtube__item__pic set-bg"
-                                data-setbg="{{ 'front-template/images/img-video.jpg' }}"
+                            <div class="youtube__item__pic set-bg" data-setbg="{{ 'front-template/images/img-video.jpg' }}"
                                 style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
                                 <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
                                     class="play-btn video-popup"><i class="fa fa-play"></i></a>

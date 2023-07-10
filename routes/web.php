@@ -22,30 +22,7 @@ use App\Http\Controllers\Admin\UserController;
 |
 */
 
-Route::get('/', function () {
-    return view('home');
-});
-Route::get('/news', function () {
-    return view('news');
-});
-Route::get('/news_show', function () {
-    return view('news_show');
-});
-Route::get('/events', function () {
-    return view('events');
-});
-Route::get('/watch', function () {
-    return view('watch');
-});
-Route::get('/playlist', function () {
-    return view('playlist');
-});
-Route::get('/galeri', function () {
-    return view('galeri');
-});
-Route::get('/galeri_show', function () {
-    return view('galeri_show');
-});
+
 
 Auth::routes();
 
@@ -61,3 +38,6 @@ Route::prefix('admin')->middleware('role:1')->group(function () {
     Route::resource('/user', UserController::class);
     Route::resource('/profile', ProfileController::class);
 });
+
+
+require __DIR__ . '/front.php';
