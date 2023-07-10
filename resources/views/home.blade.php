@@ -32,28 +32,32 @@
                 @endforeach
 
                 <div class="col-md-3">
-                    @foreach ($latest as $l)
+                    @foreach ($latest1 as $l1)
                         <a href="single.html" class="h-entry mb-30 v-height gradient">
                             <div class="featured-img"
-                                style="background-image: url('{{ url('storage/post', $l->image) }}');">
+                                style="background-image: url('{{ url('storage/post', $l1->image) }}');">
                             </div>
                             <div class="text">
                                 <span class="date">Apr. 14th, 2022</span>
-                                <h2>{{ $l->title }}</h2>
+                                <h2>{{ $l1->title }}</h2>
                             </div>
                         </a>
                     @endforeach
                 </div>
-                {{-- <div class="col-md-3">
-                    <a href="single.html" class="h-entry mb-30 v-height gradient">
-                        <div class="featured-img" style="background-image: url('{{ 'front-template/images/1.png' }}');">
-                        </div>
-                        <div class="text">
-                            <span class="date">Apr. 14th, 2022</span>
-                            <h2> fdgf</h2>
-                        </div>
-                    </a>
-                </div> --}}
+
+                <div class="col-md-3">
+                    @foreach ($latest2 as $l2)
+                        <a href="single.html" class="h-entry mb-30 v-height gradient">
+                            <div class="featured-img"
+                                style="background-image: url('{{ url('storage/post', $l2->image) }}');">
+                            </div>
+                            <div class="text">
+                                <span class="date">Apr. 14th, 2022</span>
+                                <h2> fdgf</h2>
+                            </div>
+                        </a>
+                    @endforeach
+                </div>
             </div>
         </div>
     </section>
@@ -155,7 +159,8 @@
                             </div>
                         </div>
                         <div class="youtube__item">
-                            <div class="youtube__item__pic set-bg" data-setbg="{{ 'front-template/images/img-video.jpg' }}"
+                            <div class="youtube__item__pic set-bg"
+                                data-setbg="{{ 'front-template/images/img-video.jpg' }}"
                                 style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
                                 <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
                                     class="play-btn video-popup"><i class="fa fa-play"></i></a>

@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <section class="section">
+    <section class="section bg-body-tertiary">
         <div class="container">
             <div class="row blog-entries element-animate">
                 <div class="col-md-12 col-lg-8 main-content">
@@ -204,24 +204,6 @@
                         </ul>
                     </div>
                     <!-- END sidebar-box -->
-
-                    <div class="sidebar-box">
-                        <h3 class="heading">Tags</h3>
-                        <ul class="tags">
-                            <li><a href="#">Travel</a></li>
-                            <li><a href="#">Adventure</a></li>
-                            <li><a href="#">Food</a></li>
-                            <li><a href="#">Lifestyle</a></li>
-                            <li><a href="#">Business</a></li>
-                            <li><a href="#">Freelancing</a></li>
-                            <li><a href="#">Travel</a></li>
-                            <li><a href="#">Adventure</a></li>
-                            <li><a href="#">Food</a></li>
-                            <li><a href="#">Lifestyle</a></li>
-                            <li><a href="#">Business</a></li>
-                            <li><a href="#">Freelancing</a></li>
-                        </ul>
-                    </div>
                 </div>
                 <!-- END sidebar -->
 

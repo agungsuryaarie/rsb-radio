@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <section class="section about-services spad">
+    <section class="section about-services spad bg-body-tertiary">
         <div class="container">
             <div class="section-title center-title">
                 <h2>Galeri Foto</h2>

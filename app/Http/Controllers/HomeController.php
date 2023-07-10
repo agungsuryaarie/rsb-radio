@@ -12,7 +12,8 @@ class HomeController extends Controller
     {
         // $menu = "Radio Suara batu bara";
         $post = Post::where('category_id', '=', '2')->limit(1)->get();
-        $latest = Post::where('category_id', '=', '2')->limit(4)->get();
-        return view('home', compact('post', 'latest'));
+        $latest1 = Post::where('category_id', '=', '2')->offset(1)->limit(2)->get();
+        $latest2 = Post::where('category_id', '=', '2')->offset(3)->limit(2)->get();
+        return view('home', compact('post', 'latest1', 'latest2'));
     }
 }
