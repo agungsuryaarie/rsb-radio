@@ -19,6 +19,8 @@
     <link rel="stylesheet" href="{{ asset('back-template/css/components.css') }}">
     <link rel="stylesheet" href="{{ asset('back-template/css/custom.css') }}">
     <link rel="stylesheet" href="{{ asset('back-template/modules/summernote/summernote-bs4.css') }}">
+    <link rel="stylesheet" href="{{ asset('back-template/modules/chocolat/dist/css/chocolat.css') }}">
+
 
 
 </head>
@@ -39,7 +41,7 @@
                             class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                             @if (isset(Auth::user()->profile->picture))
                                 <img alt="image"
-                                    src="{{ url('storage/' . Auth::user()->id, Auth::user()->profile->picture) }}"
+                                    src="{{ url('storage/userUpload/' . Auth::user()->id, Auth::user()->profile->picture) }}"
                                     class="rounded-circle mr-1">
                             @else
                                 <img alt="image" src="{{ asset('back-template/img/avatar/avatar-1.png') }}"
@@ -100,6 +102,7 @@
             <script src="{{ asset('back-template/js/custom.js') }}"></script>
             <script src="{{ asset('back-template/modules/izitoast/js/iziToast.min.js') }}"></script>
             <script src="{{ asset('back-template/modules/summernote/summernote-bs4.js') }}"></script>
+            <script src="{{ asset('back-template/modules/chocolat/dist/js/jquery.chocolat.min.js') }}"></script>
         </div>
     </div>
 

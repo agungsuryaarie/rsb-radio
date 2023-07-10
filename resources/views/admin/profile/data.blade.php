@@ -12,19 +12,22 @@
                         <div class="profile-widget-header">
                             <div class="upload-profile">
                                 @if (isset($profile->picture))
-                                    <img src="{{ url('storage/' . Auth::user()->id, $profile->picture) }}">
+                                    <img src="{{ url('storage/userUpload/' . Auth::user()->id, $profile->picture) }}"
+                                        id="profile" alt="Profile Picture">
                                 @else
-                                    <img src="{{ asset('back-template/img/avatar/avatar-1.png') }}">
+                                    <img src="{{ asset('back-template/img/avatar/avatar-1.png') }}" id="preview"
+                                        alt="Default Profile Picture">
                                 @endif
                                 <div class="round">
-                                    <input type="file" name="picture" id="image" accept=".jpg, .jpeg, .png">
+                                    <input type="file" name="picture" id="image" accept=".jpg, .jpeg, .png"
+                                        onchange="previewImage(event)">
                                     <i class="fa fa-camera" style="color: #fff;"></i>
                                 </div>
                             </div>
                             <div class="profile-widget-items">
                                 <div class="profile-widget-item">
                                     <div class="profile-widget-item-label">Posts</div>
-                                    <div class="profile-widget-item-value">187</div>
+                                    <div class="profile-widget-item-value">{{ $post }}</div>
                                 </div>
                                 <div class="profile-widget-item">
                                     <div class="profile-widget-item-label">Followers</div>
@@ -136,4 +139,20 @@
             </div>
         </form>
     </section>
+@endsection
+
+@section('script')
+    <script>
+        function previewImage(event) {
+            var input = event.target;
+            var reader = new FileReader();
+
+            reader.onload = function() {
+                var preview = document.getElementById('profile');
+                preview.src = reader.result;
+            };
+
+            reader.readAsDataURL(input.files[0]);
+        }
+    </script>
 @endsection

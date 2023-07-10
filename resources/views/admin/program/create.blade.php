@@ -6,29 +6,25 @@
         <div class="col-12 col-md-12 col-lg-12">
             <div class="card">
                 <div class="card-header">
-                    <h4>Write Your Post</h4>
+                    <h4>Write Your Program</h4>
                 </div>
-                <form action="{{ route('post.store') }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ route('program.store') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     <div class="card-body">
-                        <x-inputValue type="text" name="title" label="Judul" value="">
+                        <x-inputValue type="text" name="name" label="Judul Program" value="">
                         </x-inputValue>
-                        <x-dropdown name="category_id" label="Kategori">
-                            @foreach ($kategori as $item)
-                                <option value="{{ $item->id }}" @selected(old('category_id') == $item->id)>
+                        <x-dropdown name="host" label="Penyiar">
+                            @foreach ($host as $item)
+                                <option value="{{ $item->id }}" @selected(old('host') == $item->id)>
                                     {{ $item->name }}</option>
                             @endforeach
                         </x-dropdown>
-                        <x-textarea name="content" label="Content">{{ old('content') }}</x-textarea>
-                        <x-uploadPreview name="image" oldImage="" label="Picture" fitur="post"></x-uploadPreview>
-                        <x-dropdown name="status" label="Status">
-                            <option value="1" @selected(old('status') == '1')>Publish</option>
-                            <option value="2" @selected(old('status') == '2')>Draft</option>
-                        </x-dropdown>
+                        <x-textarea name="description" label="Deskripsi">{{ old('description') }}</x-textarea>
+                        <x-uploadPreview name="cover" oldImage="" label="Cover" fitur="program"></x-uploadPreview>
                         <div class="form-group row mb-4">
                             <div class="col-sm-12 col-md-12">
-                                <button class="btn btn-primary">Create Post</button>
-                                <a href="{{ route('post.index') }}" class="btn btn-danger float-right">
+                                <button class="btn btn-primary">Create Program</button>
+                                <a href="{{ route('profile.index') }}" class="btn btn-danger float-right">
                                     <i class="fas fa-reply"></i> Back</a>
                             </div>
                         </div>

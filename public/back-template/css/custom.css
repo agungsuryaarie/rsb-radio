@@ -4,15 +4,22 @@
 }
 
 .upload-profile{
-
     position: relative;
     float: left;
-    width: 100px;
     margin: -35px -5px 0 30px;
     position: relative;
     z-index: 1;
 }
 
+#profile{  
+  max-height:125px;
+  height:auto;
+  width:auto;
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+  padding:5px;
+}
 .upload-profile img{
     width: 125px;
     border-radius: 50%;
@@ -44,7 +51,7 @@ input[type=file]::-webkit-file-upload-button{
 
 
 #preview{  
-  max-height:256px;
+  max-width:300px;
   height:auto;
   width:auto;
   display:block;

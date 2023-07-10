@@ -3,11 +3,13 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Category;
 use App\Models\Post;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use \Yajra\Datatables\Datatables;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
 class PostController extends Controller
 {
@@ -18,8 +20,8 @@ class PostController extends Controller
             $data = Post::latest()->get();
             return Datatables::of($data)
                 ->addIndexColumn()
-                ->addColumn('categories', function ($data) {
-                    return $data->categories->name;
+                ->addColumn('category', function ($data) {
+                    return $data->category->name;
                 })
                 ->addColumn('author', function ($data) {
                     return $data->user->name;
@@ -39,51 +41,69 @@ class PostController extends Controller
     public function create()
     {
         $menu = "Post Create";
-        return view('admin.post.create', compact('menu'));
+        $kategori = Category::all();
+        return view('admin.post.create', compact('menu', 'kategori'));
     }
 
     public function store(Request $request)
     {
         //Translate Bahasa Indonesia
         $message = array(
-            'categories_id.required'    => 'Kategori harus dipilih.',
             'title.required'            => 'Judul harus diisi.',
+            'category_id.required'    => 'Kategori harus dipilih.',
             'content.required'          => 'Konten harus diisi.',
             'status.required'           => 'Status harus dipilih.',
-            'image.required'            => 'Gambar harus diupload.',
         );
 
         // Validasi input dengan rule yang ditentukan
         $validator = Validator::make($request->all(), [
-            'categories_id'     => 'required',
             'title'             => 'required',
+            'category_id'     => 'required',
             'content'           => 'required',
             'status'            => 'required',
-            'image'             => 'required',
-
+            'image'             => $request->hidden_id ? 'nullable' : 'required', // Menjadikan gambar opsional saat edit
         ], $message);
 
         if ($validator->fails()) {
-            return response()->json(['errors' => $validator->errors()->all()]);
+            return redirect()->back()->withErrors($validator->errors())->withInput();
         }
 
+        $filename = null; // Inisialisasi variabel filename
+        $oldImage = null; // Inisialisasi variabel oldImageName
+
         if ($request->hasFile('image')) {
+            // Hapus gambar lama dari storage jika ada
+            if ($request->hidden_id) {
+                $post = Post::find($request->hidden_id);
+                $oldImage = $post->image;
+                if ($oldImage) {
+                    Storage::delete('public/post/' . $oldImage);
+                }
+            }
+
+            // Unggah gambar baru
             $image = $request->file('image');
             $filename = time() . '.' . $image->getClientOriginalExtension();
-            $image->storeAs('public/' . Auth::user()->id, $filename);
+            $image->storeAs('public/post', $filename);
         }
+
+        $postData = [
+            'user_id' => Auth::user()->id,
+            'category_id' => $request->category_id,
+            'title' => $request->title,
+            'content' => $request->content,
+            'status' => $request->status,
+        ];
+
+        if ($filename) {
+            $postData['image'] = $filename;
+        }
+
         Post::updateOrCreate(
             [
                 'id' => $request->hidden_id
             ],
-            [
-                'user_id' => Auth::user()->id,
-                'categories_id' => $request->categories_id,
-                'title' => $request->title,
-                'content' => $request->content,
-                'status' => $request->status,
-                'image' => $filename
-            ]
+            $postData
         );
 
         return redirect()->route('post.index')->with(['success' => 'Post saved successfully.']);
@@ -92,14 +112,18 @@ class PostController extends Controller
     public function edit(Post $post)
     {
         $menu = "Post Edit";
+        $kategori = Category::all();
         $posts = Post::where('id', $post->id)->first();
-        return view('admin.post.create', compact('menu', 'posts'));
+        return view('admin.post.edit', compact('menu', 'kategori', 'posts'));
     }
 
-    public function show(Post $post)
+    public function destroy($id)
     {
-
-        $data = Post::where('id', $post->id)->first();
-        return response()->json($data);
+        $post = Post::find($id);
+        if ($post->image) {
+            Storage::delete('public/post/' . $post->image);
+        }
+        $post->delete();
+        return response()->json(['success' => 'Post deleted successfully.']);
     }
 }

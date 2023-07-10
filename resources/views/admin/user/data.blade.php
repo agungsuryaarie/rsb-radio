@@ -13,7 +13,7 @@
         </x-datatable>
     </section>
 
-    <x-ajaxModel size="">
+    <x-ajaxModel size="modal-lg">
         <x-input type="text" name="name" label="Nama"></x-input>
         <x-input type="email" name="email" label="Email"></x-input>
         <x-dropdown name="role" label="Role">
