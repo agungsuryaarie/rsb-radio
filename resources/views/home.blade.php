@@ -23,7 +23,6 @@
                             <div class="videos__large__item__text">
                                 <h4>{{ $p->title }}</h4>
                                 <ul>
-                                    <li>02:35:18</li>
                                     <li>Dec 17, 2019</li>
                                 </ul>
                             </div>
@@ -53,7 +52,7 @@
                             </div>
                             <div class="text">
                                 <span class="date">Apr. 14th, 2022</span>
-                                <h2> fdgf</h2>
+                                <h2>{{ $l2->title }}</h2>
                             </div>
                         </a>
                     @endforeach
