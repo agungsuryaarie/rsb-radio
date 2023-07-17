@@ -10045,7 +10045,7 @@ textarea {
 .posts-entry .blog-entry-search-item {
   margin-bottom: 30px; }
   .posts-entry .blog-entry-search-item .img-link {
-    width: 280px;
+    width: 100%;
     border-radius: 0; }
     .posts-entry .blog-entry-search-item .img-link img {
       margin-bottom: 0;
@@ -10138,29 +10138,32 @@ textarea {
     .sidebar {
       padding-left: 15px; } }
 
-.sidebar-box {
-  margin-bottom: 4em;
-  font-size: 15px;
-  width: 100%;
-  float: left;
-  /* background: #fff; */
- }
+      .sidebar-box {
+        margin-bottom: 4em;
+        font-size: 15px;
+        width: 100%;
+        float: left;
+        /* background: #fff; */
+        padding: 15px;
+        border-radius: 10px;
+        border: 1px solid rgba(155,155,155,0.15);
+    }
   .sidebar-box *:last-child {
     margin-bottom: 0; }
   .sidebar-box .heading {
-    font-size: 18px;
+    font-size: 16px;
     color: #000;
-    font-weight: 400;
+    font-weight: 600;
     margin-bottom: 30px;
-    padding-bottom: 20px;
+    padding-bottom: 11px;
     border-bottom: 1px solid #e6e6e6; }
 
 .comment-wrap .heading, .search-result-wrap .heading {
-  font-size: 18px;
+  font-size: 16px;
   color: #000;
-  font-weight: 400;
+  font-weight: 600;
   margin-bottom: 30px;
-  padding-bottom: 20px;
+  padding-bottom: 11px;
   border-bottom: 1px solid #e6e6e6; }
 
 .tags {
@@ -10305,7 +10308,12 @@ textarea {
         display: table-cell;
         vertical-align: middle; }
       .post-entry-sidebar ul li a .text h4, .post-entry-sidebar ul li a .text .h4, .post-entry-footer ul li a .text h4, .post-entry-footer ul li a .text .h4 {
-        font-size: 18px; }
+        font-size: 15px;
+        color: #202124;
+        font-weight: 600; }
+        .post-entry-sidebar ul li a .text h4:hover{
+          color: #1A73E8;
+        }
 
 .post-entry-footer ul li {
   margin-bottom: 0; }

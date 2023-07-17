@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg navbar-light sticky-top"data-navbar-on-scroll="data-navbar-on-scroll">
+<nav class="navbar navbar-expand-lg navbar-light sticky-top border-1"data-navbar-on-scroll="data-navbar-on-scroll">
     <div class="container">
         <a href="index.html" class="logo m-0 float-start"><img src="{{ 'front-template/images/logo-black.png' }}"
                 style="width: 85px"></a>
@@ -9,13 +9,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('home.index') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/news">News</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Listen</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('article.index') }}">News</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/playlist">Playlist</a>
@@ -24,10 +21,10 @@
                     <a class="nav-link active" aria-current="page" href="/watch">Watch</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/galeri">Galeri</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('galeri.index') }}">Galeri</a>
                 </li>
                 <li class="nav-item me-2">
-                    <a class="nav-link active" aria-current="page" href="/events">Events</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('events.index') }}">Events</a>
                 </li>
 
                 {{-- <li class="nav-item dropdown">

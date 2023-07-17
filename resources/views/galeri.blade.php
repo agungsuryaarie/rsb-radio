@@ -3,8 +3,8 @@
     <section class="section about-services spad bg-body-tertiary">
         <div class="container">
             <div class="section-title center-title">
-                <h2>Galeri Foto</h2>
-                <h1>Galeri Foto</h1>
+                <h2>Album Foto</h2>
+                <h1>Album Foto</h1>
             </div>
             <div class="row-image">
                 @foreach ($album as $a)

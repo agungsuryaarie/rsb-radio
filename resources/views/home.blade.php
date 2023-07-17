@@ -15,15 +15,16 @@
     <section class="section bg-body-tertiary">
         <div class="container">
             <div class="row align-items-stretch retro-layout">
-                @foreach ($post as $p)
+                @foreach ($article as $a)
                     <div class="col-md-6">
-                        <a href="single.html" class="h-entry img-5 b-height gradient">
-                            <div class="featured-img" style="background-image: url('{{ url('storage/post', $p->image) }}');">
+                        <a href="{{ route('article.show', $a->slug) }}" class="h-entry img-5 b-height gradient">
+                            <div class="featured-img" style="background-image: url('{{ url('storage/post', $a->image) }}');">
                             </div>
                             <div class="videos__large__item__text">
-                                <h4>{{ $p->title }}</h4>
-                                <ul>
-                                    <li>Dec 17, 2019</li>
+                                <h4>{{ $a->title }}</h4>
+                                <ul class="article-info" style="padding-left: 0">
+                                    <li><i class="bi bi-calendar"></i> {{ $a->created_at }}</li>
+                                    <li><i class="bi bi-clock"></i> {{ $a->jam }} WIB</li>
                                 </ul>
                             </div>
                         </a>
@@ -31,28 +32,28 @@
                 @endforeach
 
                 <div class="col-md-3">
-                    @foreach ($latest1 as $l1)
-                        <a href="single.html" class="h-entry mb-30 v-height gradient">
+                    @foreach ($article1 as $a1)
+                        <a href="{{ route('article.show', $a1->slug) }}" class="h-entry mb-30 v-height gradient">
                             <div class="featured-img"
-                                style="background-image: url('{{ url('storage/post', $l1->image) }}');">
+                                style="background-image: url('{{ url('storage/post', $a1->image) }}');">
                             </div>
                             <div class="text">
-                                <span class="date">Apr. 14th, 2022</span>
-                                <h2>{{ $l1->title }}</h2>
+                                <span class="date">{{ $a1->created_at }}</span>
+                                <h2>{{ $a1->title }}</h2>
                             </div>
                         </a>
                     @endforeach
                 </div>
 
                 <div class="col-md-3">
-                    @foreach ($latest2 as $l2)
-                        <a href="single.html" class="h-entry mb-30 v-height gradient">
+                    @foreach ($article2 as $a2)
+                        <a href="{{ route('article.show', $a2->slug) }}" class="h-entry mb-30 v-height gradient">
                             <div class="featured-img"
-                                style="background-image: url('{{ url('storage/post', $l2->image) }}');">
+                                style="background-image: url('{{ url('storage/post', $a2->image) }}');">
                             </div>
                             <div class="text">
                                 <span class="date">Apr. 14th, 2022</span>
-                                <h2>{{ $l2->title }}</h2>
+                                <h2>{{ $a2->title }}</h2>
                             </div>
                         </a>
                     @endforeach
@@ -71,34 +72,20 @@
                 <div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">View All</a></div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="blog-entry">
-                        <a href="single.html" class="img-link">
-                            <img src="{{ 'front-template/images/1.png' }}" alt="Image" class="img-fluid">
-                        </a>
+                @foreach ($program as $p)
+                    <div class="col-md-6 col-lg-3">
+                        <div class="blog-entry">
+                            <a href="single.html">
+                                <div class="container-image">
+                                    <img src="{{ url('storage/program', $p->cover) }}" class="image">
+                                    <div class="overlay">
+                                        <div class="text-program">{{ $p->name }}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="blog-entry">
-                        <a href="single.html" class="img-link">
-                            <img src="{{ 'front-template/images/2.jpg' }}" alt="Image" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="blog-entry">
-                        <a href="single.html" class="img-link">
-                            <img src="{{ 'front-template/images/3.png' }}" alt="Image" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="blog-entry">
-                        <a href="single.html" class="img-link">
-                            <img src="{{ 'front-template/images/4.png' }}" alt="Image" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -158,8 +145,7 @@
                             </div>
                         </div>
                         <div class="youtube__item">
-                            <div class="youtube__item__pic set-bg"
-                                data-setbg="{{ 'front-template/images/img-video.jpg' }}"
+                            <div class="youtube__item__pic set-bg" data-setbg="{{ 'front-template/images/img-video.jpg' }}"
                                 style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
                                 <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
                                     class="play-btn video-popup"><i class="fa fa-play"></i></a>
@@ -169,8 +155,7 @@
                             </div>
                         </div>
                         <div class="youtube__item">
-                            <div class="youtube__item__pic set-bg"
-                                data-setbg="{{ 'front-template/images/img-video.jpg' }}"
+                            <div class="youtube__item__pic set-bg" data-setbg="{{ 'front-template/images/img-video.jpg' }}"
                                 style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
                                 <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
                                     class="play-btn video-popup"><i class="fa fa-play"></i></a>

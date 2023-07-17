@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use \Yajra\Datatables\Datatables;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class PostController extends Controller
 {
@@ -91,8 +92,11 @@ class PostController extends Controller
             'user_id' => Auth::user()->id,
             'category_id' => $request->category_id,
             'title' => $request->title,
+            'slug' => Str::slug($request->title),
             'content' => $request->content,
             'status' => $request->status,
+            'tanggal' => date('Y-m-d'),
+            'jam' => date('H:i:s'),
         ];
 
         if ($filename) {
@@ -101,7 +105,7 @@ class PostController extends Controller
 
         Post::updateOrCreate(
             [
-                'id' => $request->hidden_id
+                'id' => $request->hidden_id,
             ],
             $postData
         );

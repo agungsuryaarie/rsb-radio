@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\EventsController;
+use App\Http\Controllers\ArticleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,12 +18,12 @@ use App\Http\Controllers\EventsController;
 |
 */
 
-Route::get('/news', function () {
-    return view('news');
-});
-Route::get('/news_show', function () {
-    return view('news_show');
-});
+// Route::get('/post', function () {
+//     return view('post');
+// });
+// Route::get('/post_show', function () {
+//     return view('post_show');
+// });
 Route::get('/events', function () {
     return view('events');
 });
@@ -45,3 +46,5 @@ Route::get('/galeri', [GaleriController::class, 'index'])->name('galeri.index');
 Route::get('/galeri/foto/detail/{id}', [GaleriController::class, 'show'])->name('galeri.show');
 // Events
 Route::get('/events', [EventsController::class, 'index'])->name('events.index');
+Route::get('/article', [ArticleController::class, 'index'])->name('article.index');
+Route::get('/article/{article:slug}', [ArticleController::class, 'show'])->name('article.show');

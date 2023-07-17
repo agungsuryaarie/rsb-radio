@@ -2,6 +2,10 @@
 @section('content')
     <section class="section bg-body-tertiary posts-entry">
         <div class="container">
+            <div class="section-title center-title">
+                <h2>Events</h2>
+                <h1>Events</h1>
+            </div>
             <div class="row g-3">
                 <div class="col-md-12">
                     <div class="row g-3">
