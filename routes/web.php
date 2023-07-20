@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\ProfileController;
 use App\Http\Controllers\Admin\ProgramController;
 use App\Http\Controllers\Admin\UserController;
+use App\Http\Controllers\Admin\VideoController;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,6 +34,7 @@ Route::prefix('admin')->middleware('role:1')->group(function () {
     Route::resource('/event', EventController::class);
     Route::resource('/program', ProgramController::class);
     Route::resource('/album', AlbumController::class);
+    Route::resource('/video', VideoController::class);
     Route::get('/album/photo/{id}', [PhotoController::class, 'index'])->name('photo.index');
     Route::post('/album/photo/store/{id}', [PhotoController::class, 'store'])->name('photo.store');
     Route::resource('/user', UserController::class);
