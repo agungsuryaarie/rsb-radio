@@ -47,7 +47,7 @@ class ProfileController extends Controller
                 'status' => $request->status,
                 'tentang' => $request->tentang,
                 'facebook' => $request->facebook,
-                'instagram' => $request->instagram,
+                'instagram' => $request->instagram,W
                 'twitter' => $request->twitter,
                 'tiktok' => $request->tiktok,
                 'picture' => $filename ?: $oldImage // Menggunakan gambar lama jika tidak ada gambar yang diunggah

@@ -69,7 +69,7 @@
                 <div class="col-sm-6">
                     <h2 class="posts-entry-title">Program Unggulan</h2>
                 </div>
-                <div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">View All</a></div>
+                <div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">Lihat Semua</a></div>
             </div>
             <div class="row">
                 @foreach ($program as $p)
@@ -101,7 +101,7 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="track__all">
-                        <a href="/playlist" class="primary-btn border-btn">View all tracks</a>
+                        <a href="/playlist" class="primary-btn border-btn">Lihat Semua Track</a>
                     </div>
                 </div>
             </div>
@@ -475,60 +475,55 @@
         <div class="container">
             <div class="row mb-4">
                 <div class="col-sm-6">
-                    <h2 class="posts-entry-title">Watch Our Video</h2>
+                    <h2 class="posts-entry-title">Tonton Video</h2>
                 </div>
-                <div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">View All</a></div>
+                <div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">Lihat Semua</a></div>
             </div>
 
             <div class="row align-items-stretch retro-layout-alt">
-                <div class="col-sm-6">
-                    <div class="videos__large__item set-bg" data-setbg="{{ 'front-template/images/img-video.jpg' }}">
-                        <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1" class="play-btn video-popup"><i
-                                class="fa fa-play"></i></a>
-                        <div class="videos__large__item__text">
-                            <h4>Martin Garrix & Pierce Fulton feat. Mike Shinoda - Waiting For Tomorrow (Official Video)
-                            </h4>
-                            <ul>
-                                <li>02:35:18</li>
-                                <li>Dec 17, 2019</li>
-                            </ul>
+                @foreach ($video as $v)
+                    @php
+                        preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $v->link, $matches);
+                        $youtubeVideoId = $matches[1] ?? null;
+                    @endphp
+                    <div class="col-sm-6">
+                        <div class="videos__large__item set-bg"
+                            data-setbg="https://img.youtube.com/vi/{{ $youtubeVideoId }}/0.jpg">
+                            <a href="{{ $v->link }}" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                            <div class="videos__large__item__text">
+                                <h4>{{ $v->title }}</h4>
+                                <ul>
+                                    <li>{{ \Carbon\Carbon::parse($v->created_at)->format('H:i:s') }}</li>
+                                    <li>{{ \Carbon\Carbon::parse($v->created_at)->format('Y-m-d') }}</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
                 <div class="col-md-6">
                     <div class="two-col d-block d-md-flex justify-content-between">
-                        <div class="col-lg-6">
-                            <div class="videos__item">
-                                <div class="videos__item__pic set-bg"
-                                    data-setbg="{{ 'front-template/images/img-video.jpg' }}">
-                                    <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
-                                        class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                                </div>
-                                <div class="videos__item__text">
-                                    <h5>Electric Love Festival 2019 - The Opening Ceremony</h5>
-                                    <ul>
-                                        <li>02:35:18</li>
-                                        <li>Dec 17, 2019</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="videos__item">
-                                <div class="videos__item__pic set-bg"
-                                    data-setbg="{{ 'front-template/images/img-video.jpg' }}">
-                                    <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
-                                        class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                                </div>
-                                <div class="videos__item__text">
-                                    <h5>Electric Love Festival 2019 - The Opening Ceremony</h5>
-                                    <ul>
-                                        <li>02:35:18</li>
-                                        <li>Dec 17, 2019</li>
-                                    </ul>
+                        @foreach ($video1 as $v1)
+                            @php
+                                preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $v1->link, $matches);
+                                $youtubeVideoId = $matches[1] ?? null;
+                            @endphp
+                            <div class="col-lg-6">
+                                <div class="videos__item">
+                                    <div class="videos__item__pic set-bg"
+                                        data-setbg="https://img.youtube.com/vi/{{ $youtubeVideoId }}/0.jpg">
+                                        <a href="{{ $v1->link }}" class="play-btn video-popup"><i
+                                                class="fa fa-play"></i></a>
+                                    </div>
+                                    <div class="videos__item__text">
+                                        <h5>{{ $v1->title }}</h5>
+                                        <ul>
+                                            <li>{{ \Carbon\Carbon::parse($v1->created_at)->format('H:i:s') }}</li>
+                                            <li>{{ \Carbon\Carbon::parse($v1->created_at)->format('Y-m-d') }}</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
