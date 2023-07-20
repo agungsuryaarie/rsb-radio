@@ -12,15 +12,15 @@
                         <div class="profile-widget-header">
                             <div class="upload-profile">
                                 @if (isset($profile->picture))
-                                    <img src="{{ url('storage/userUpload/' . Auth::user()->id, $profile->picture) }}"
-                                        id="profile" alt="Profile Picture">
+                                    <img src="{{ url('storage/userUpload/' . $profile->picture) }}" id="preview"
+                                        alt="Profile Picture">
                                 @else
                                     <img src="{{ asset('back-template/img/avatar/avatar-1.png') }}" id="preview"
                                         alt="Default Profile Picture">
                                 @endif
                                 <div class="round">
-                                    <input type="file" name="picture" id="image" accept=".jpg, .jpeg, .png"
-                                        onchange="previewImage(event)">
+                                    <input type="file" name="picture" id="picture" accept=".jpg, .jpeg, .png"
+                                        onchange="previewImg(event)">
                                     <i class="fa fa-camera" style="color: #fff;"></i>
                                 </div>
                             </div>
@@ -143,16 +143,16 @@
 
 @section('script')
     <script>
-        function previewImage(event) {
-            var input = event.target;
-            var reader = new FileReader();
+        function previewImg() {
+            const foto = document.querySelector('#picture');
+            const img = document.querySelector('#preview');
 
-            reader.onload = function() {
-                var preview = document.getElementById('profile');
-                preview.src = reader.result;
-            };
+            const fileFoto = new FileReader();
+            fileFoto.readAsDataURL(foto.files[0]);
 
-            reader.readAsDataURL(input.files[0]);
+            fileFoto.onload = function(e) {
+                img.src = e.target.result;
+            }
         }
     </script>
 @endsection
