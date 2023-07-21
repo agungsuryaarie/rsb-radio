@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('image');
             $table->timestamps();
 
-            $table->foreign('albums_id')->references('id')->on('albums')->onDelete('cascade');
+            $table->foreign('album_id')->references('id')->on('albums')->onDelete('cascade');
         });
     }
 
