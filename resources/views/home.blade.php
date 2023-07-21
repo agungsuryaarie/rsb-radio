@@ -12,110 +12,80 @@
     </div> --}}
 
 
-    <section class="section bg-primary-50">
+    <section class="section bg-body-tertiary">
         <div class="container">
             <div class="row align-items-stretch retro-layout">
-                <div class="col-md-5">
-                    <a href="single.html" class="h-entry img-5 b-height gradient">
-                        <div class="featured-img" style="background-image: url('{{ 'front-template/images/tour-2.jpg' }}');">
-                        </div>
-                        <div class="videos__large__item__text">
-                            <h4>Martin Garrix & Pierce Fulton feat. Mike Shinoda - Waiting For Tomorrow (Official Video)
-                            </h4>
-                            <ul>
-                                <li>02:35:18</li>
-                                <li>Dec 17, 2019</li>
-                            </ul>
-                        </div>
-                    </a>
-                </div>
-                <div class="col-md-4">
-                    <a href="single.html" class="h-entry mb-30 v-height gradient">
-                        <div class="featured-img"
-                            style="background-image: url('{{ 'front-template/images/tour-1.jpg' }}');">
-                        </div>
+                @foreach ($article as $a)
+                    <div class="col-md-6">
+                        <a href="{{ route('article.show', $a->slug) }}" class="h-entry img-5 b-height gradient">
+                            <div class="featured-img" style="background-image: url('{{ url('storage/post', $a->image) }}');">
+                            </div>
+                            <div class="videos__large__item__text">
+                                <h4>{{ $a->title }}</h4>
+                                <ul class="article-info" style="padding-left: 0">
+                                    <li><i class="bi bi-calendar"></i> {{ $a->created_at }}</li>
+                                    <li><i class="bi bi-clock"></i> {{ $a->jam }} WIB</li>
+                                </ul>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
 
-                        <div class="text">
-                            <span class="date">Apr. 14th, 2022</span>
-                            <h2>AI can now kill those annoying cookie pop-ups</h2>
-                        </div>
-                    </a>
-                    <a href="single.html" class="h-entry mb-30 v-height gradient">
-                        <div class="featured-img"
-                            style="background-image: url('{{ 'front-template/images/tour-3.jpg' }}');">
-                        </div>
-
-                        <div class="text">
-                            <span class="date">Apr. 14th, 2022</span>
-                            <h2>Don’t assume your user data in the cloud is safe</h2>
-                        </div>
-                    </a>
-                </div>
                 <div class="col-md-3">
-                    <a href="single.html" class="h-entry mb-30 v-height gradient">
+                    @foreach ($article1 as $a1)
+                        <a href="{{ route('article.show', $a1->slug) }}" class="h-entry mb-30 v-height gradient">
+                            <div class="featured-img"
+                                style="background-image: url('{{ url('storage/post', $a1->image) }}');">
+                            </div>
+                            <div class="text">
+                                <span class="date">{{ $a1->created_at }}</span>
+                                <h2>{{ $a1->title }}</h2>
+                            </div>
+                        </a>
+                    @endforeach
+                </div>
 
-                        <div class="featured-img"
-                            style="background-image: url('{{ 'front-template/images/tour-4.jpg' }}');"></div>
-
-                        <div class="text">
-                            <span class="date">Apr. 14th, 2022</span>
-                            <h2>Startup vs corporate: What job suits you best?</h2>
-                        </div>
-                    </a>
-                    <a href="single.html" class="h-entry v-height gradient">
-
-                        <div class="featured-img"
-                            style="background-image: url('{{ 'front-template/images/tour-5.jpg' }}');"></div>
-
-                        <div class="text">
-                            <span class="date">Apr. 14th, 2022</span>
-                            <h2>Thought you loved Python? Wait until you meet Rust</h2>
-                        </div>
-                    </a>
+                <div class="col-md-3">
+                    @foreach ($article2 as $a2)
+                        <a href="{{ route('article.show', $a2->slug) }}" class="h-entry mb-30 v-height gradient">
+                            <div class="featured-img"
+                                style="background-image: url('{{ url('storage/post', $a2->image) }}');">
+                            </div>
+                            <div class="text">
+                                <span class="date">Apr. 14th, 2022</span>
+                                <h2>{{ $a2->title }}</h2>
+                            </div>
+                        </a>
+                    @endforeach
                 </div>
             </div>
         </div>
     </section>
-    <!-- End retroy layout blog posts -->
 
     <!-- Start posts-entry -->
-    <section class="section posts-entry posts-entry-sm bg-primary-50">
+    <section class="section posts-entry posts-entry-sm bg-body-tertiary">
         <div class="container">
             <div class="row mb-4">
                 <div class="col-sm-6">
                     <h2 class="posts-entry-title">Program Unggulan</h2>
                 </div>
-                <div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">View All</a></div>
+                <div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">Lihat Semua</a></div>
             </div>
             <div class="row">
-                <div class="col-md-6 col-lg-3">
-                    <div class="blog-entry">
-                        <a href="single.html" class="img-link">
-                            <img src="{{ 'front-template/images/1.png' }}" alt="Image" class="img-fluid">
-                        </a>
+                @foreach ($program as $p)
+                    <div class="col-md-6 col-lg-3">
+                        <div class="blog-entry">
+                            <a href="single.html">
+                                <div class="container-image">
+                                    <img src="{{ url('storage/program', $p->cover) }}" class="image">
+                                    <div class="overlay">
+                                        <div class="text-program">{{ $p->name }}</div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="blog-entry">
-                        <a href="single.html" class="img-link">
-                            <img src="{{ 'front-template/images/2.jpg' }}" alt="Image" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="blog-entry">
-                        <a href="single.html" class="img-link">
-                            <img src="{{ 'front-template/images/3.png' }}" alt="Image" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="blog-entry">
-                        <a href="single.html" class="img-link">
-                            <img src="{{ 'front-template/images/4.png' }}" alt="Image" class="img-fluid">
-                        </a>
-                    </div>
-                </div>
+                @endforeach
             </div>
         </div>
     </section>
@@ -131,7 +101,7 @@
                 </div>
                 <div class="col-lg-5">
                     <div class="track__all">
-                        <a href="/playlist" class="primary-btn border-btn">View all tracks</a>
+                        <a href="/playlist" class="primary-btn border-btn">Lihat Semua Track</a>
                     </div>
                 </div>
             </div>
@@ -165,8 +135,7 @@
                             </div>
                         </div>
                         <div class="youtube__item">
-                            <div class="youtube__item__pic set-bg"
-                                data-setbg="{{ 'front-template/images/img-video.jpg' }}"
+                            <div class="youtube__item__pic set-bg" data-setbg="{{ 'front-template/images/img-video.jpg' }}"
                                 style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
                                 <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
                                     class="play-btn video-popup"><i class="fa fa-play"></i></a>
@@ -176,8 +145,7 @@
                             </div>
                         </div>
                         <div class="youtube__item">
-                            <div class="youtube__item__pic set-bg"
-                                data-setbg="{{ 'front-template/images/img-video.jpg' }}"
+                            <div class="youtube__item__pic set-bg" data-setbg="{{ 'front-template/images/img-video.jpg' }}"
                                 style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
                                 <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
                                     class="play-btn video-popup"><i class="fa fa-play"></i></a>
@@ -187,8 +155,7 @@
                             </div>
                         </div>
                         <div class="youtube__item">
-                            <div class="youtube__item__pic set-bg"
-                                data-setbg="{{ 'front-template/images/img-video.jpg' }}"
+                            <div class="youtube__item__pic set-bg" data-setbg="{{ 'front-template/images/img-video.jpg' }}"
                                 style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
                                 <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
                                     class="play-btn video-popup"><i class="fa fa-play"></i></a>
@@ -508,60 +475,55 @@
         <div class="container">
             <div class="row mb-4">
                 <div class="col-sm-6">
-                    <h2 class="posts-entry-title">Watch Our Video</h2>
+                    <h2 class="posts-entry-title">Tonton Video</h2>
                 </div>
-                <div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">View All</a></div>
+                <div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">Lihat Semua</a></div>
             </div>
 
             <div class="row align-items-stretch retro-layout-alt">
-                <div class="col-sm-6">
-                    <div class="videos__large__item set-bg" data-setbg="{{ 'front-template/images/img-video.jpg' }}">
-                        <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1" class="play-btn video-popup"><i
-                                class="fa fa-play"></i></a>
-                        <div class="videos__large__item__text">
-                            <h4>Martin Garrix & Pierce Fulton feat. Mike Shinoda - Waiting For Tomorrow (Official Video)
-                            </h4>
-                            <ul>
-                                <li>02:35:18</li>
-                                <li>Dec 17, 2019</li>
-                            </ul>
+                @foreach ($video as $v)
+                    @php
+                        preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $v->link, $matches);
+                        $youtubeVideoId = $matches[1] ?? null;
+                    @endphp
+                    <div class="col-sm-6">
+                        <div class="videos__large__item set-bg"
+                            data-setbg="https://img.youtube.com/vi/{{ $youtubeVideoId }}/0.jpg">
+                            <a href="{{ $v->link }}" class="play-btn video-popup"><i class="fa fa-play"></i></a>
+                            <div class="videos__large__item__text">
+                                <h4>{{ $v->title }}</h4>
+                                <ul>
+                                    <li>{{ \Carbon\Carbon::parse($v->created_at)->format('H:i:s') }}</li>
+                                    <li>{{ \Carbon\Carbon::parse($v->created_at)->format('Y-m-d') }}</li>
+                                </ul>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
                 <div class="col-md-6">
                     <div class="two-col d-block d-md-flex justify-content-between">
-                        <div class="col-lg-6">
-                            <div class="videos__item">
-                                <div class="videos__item__pic set-bg"
-                                    data-setbg="{{ 'front-template/images/img-video.jpg' }}">
-                                    <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
-                                        class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                                </div>
-                                <div class="videos__item__text">
-                                    <h5>Electric Love Festival 2019 - The Opening Ceremony</h5>
-                                    <ul>
-                                        <li>02:35:18</li>
-                                        <li>Dec 17, 2019</li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-lg-6">
-                            <div class="videos__item">
-                                <div class="videos__item__pic set-bg"
-                                    data-setbg="{{ 'front-template/images/img-video.jpg' }}">
-                                    <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
-                                        class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                                </div>
-                                <div class="videos__item__text">
-                                    <h5>Electric Love Festival 2019 - The Opening Ceremony</h5>
-                                    <ul>
-                                        <li>02:35:18</li>
-                                        <li>Dec 17, 2019</li>
-                                    </ul>
+                        @foreach ($video1 as $v1)
+                            @php
+                                preg_match("/^(?:http(?:s)?:\/\/)?(?:www\.)?(?:m\.)?(?:youtu\.be\/|youtube\.com\/(?:(?:watch)?\?(?:.*&)?v(?:i)?=|(?:embed|v|vi|user)\/))([^\?&\"'>]+)/", $v1->link, $matches);
+                                $youtubeVideoId = $matches[1] ?? null;
+                            @endphp
+                            <div class="col-lg-6">
+                                <div class="videos__item">
+                                    <div class="videos__item__pic set-bg"
+                                        data-setbg="https://img.youtube.com/vi/{{ $youtubeVideoId }}/0.jpg">
+                                        <a href="{{ $v1->link }}" class="play-btn video-popup"><i
+                                                class="fa fa-play"></i></a>
+                                    </div>
+                                    <div class="videos__item__text">
+                                        <h5>{{ $v1->title }}</h5>
+                                        <ul>
+                                            <li>{{ \Carbon\Carbon::parse($v1->created_at)->format('H:i:s') }}</li>
+                                            <li>{{ \Carbon\Carbon::parse($v1->created_at)->format('Y-m-d') }}</li>
+                                        </ul>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

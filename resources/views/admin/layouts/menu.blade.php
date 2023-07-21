@@ -36,6 +36,10 @@
             <a class="nav-link" href="{{ route('album.index') }}"><i class="fas fa-images"></i>
                 <span>Album</span></a>
         </li>
+        <li class="{{ request()->segment(2) == 'video' ? 'active' : '' }}">
+            <a class="nav-link" href="{{ route('video.index') }}"><i class="fas fa-video"></i>
+                <span>Video</span></a>
+        </li>
         <li class="{{ request()->segment(2) == 'user' ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('user.index') }}"><i class="fas fa-users"></i>
                 <span>User</span></a>

@@ -25,10 +25,13 @@ class ProfileController extends Controller
         if ($request->hasFile('picture')) {
             $image = $request->file('picture');
             $filename = time() . '.' . $image->getClientOriginalExtension();
-            $image->storeAs('public/userUpload/' . Auth::user()->id, $filename);
+            $image->storeAs('public/userUpload/', $filename);
         }
+
         $data = Profile::where('user_id', $request->hidden_id)->first();
-        $oldImage = $data->picture;
+        if (isset($data->picture)) {
+            $oldImage = $data->picture;
+        }
         // Memperbarui profil atau membuat baru jika tidak ada
         Profile::updateOrCreate(
             [

@@ -16,9 +16,11 @@ return new class extends Migration
             $table->unsignedBigInteger('user_id');
             $table->unsignedBigInteger('category_id');
             $table->string('title');
+            $table->string('slug');
             $table->text('content');
             $table->string('image');
             $table->string('status');
+            $table->time('jam');
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
