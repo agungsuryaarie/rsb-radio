@@ -61,7 +61,6 @@
             </div>
         </div>
     </section>
-
     <!-- Start posts-entry -->
     <section class="section posts-entry posts-entry-sm bg-body-tertiary">
         <div class="container">
@@ -89,7 +88,6 @@
             </div>
         </div>
     </section>
-
     <section class="section track spad youtube spad">
         <div class="container">
             <div class="row">
@@ -466,6 +464,26 @@
                             </div>
                         </div>
                     </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Berita --}}
+    <section class="section bg-body-tertiary">
+        <div class="container">
+            <div class="row align-items-stretch retro-layout">
+                <div class="col-md-3">
+                    @foreach ($berita['results'] as $b)
+                        <a href="#" class="h-entry mb-30 v-height gradient">
+                            <div class="featured-img" style="background-image: url('{{ $b['gambar'] }}');"> </div>
+                            <div class="text">
+                                <h5 class="date">{{ $b['judul'] }}</h5>
+                                <h6><i class="bi bi-calendar"></i> {{ $b['tanggal'] }}</h6>
+                                <h6><i class="bi bi-eye"></i>{{ $b['dilihat'] }}x dilihat</h6>
+                            </div>
+                        </a>
+                    @endforeach
                 </div>
             </div>
         </div>
