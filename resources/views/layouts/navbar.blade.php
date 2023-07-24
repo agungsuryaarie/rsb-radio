@@ -57,14 +57,13 @@
                         </li>
                     </ul>
                 </li> --}}
+                <li class="nav-item">
+                    <a class="btn btn-outline-primary" href="{{ route('login') }}" role="button">Sign In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="btn btn-primary" href="{{ route('register') }}" role="button">Sign Up</a>
+                </li>
             </ul>
-            <div class="navbar-cta" role="search">
-                <button class="btn btn-outline-primary border-purple me-2 text-bold" href="/events">Sign
-                    in</button>
-                <button class="btn btn-outline-primary border-purple me-2 text-purple" href="/login"><i
-                        class="bi bi-person-plus"></i>
-                    Sign up</button>
-            </div>
         </div>
     </div>
 </nav>
