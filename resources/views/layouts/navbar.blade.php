@@ -59,9 +59,9 @@
                 </li> --}}
             </ul>
             <div class="navbar-cta" role="search">
-                <a class="btn btn-outline-primary border-purple me-2 text-bold" href="{{ route('login') }}">Login</a>
-                <a class="btn btn-outline-primary border-purple me-2 text-purple" href="{{ route('register') }}">Sign
-                    up</a>
+                <a class="btn btn-outline-primary border-purple me-2 text-bold" href="{{ route('login') }}">Masuk</a>
+                <a class="btn btn-outline-primary border-purple me-2 text-purple"
+                    href="{{ route('register') }}">Daftar</a>
             </div>
         </div>
     </div>

@@ -410,7 +410,7 @@
         <div class="container">
             <div class="row mb-4">
                 <div class="col-sm-6">
-                    <h2 class="posts-entry-title">WADYABALA DJ AND CREWS</h2>
+                    <h2 class="posts-entry-title">Penyiar Radio</h2>
                 </div>
             </div>
             <div class="row">
@@ -470,17 +470,25 @@
     </section>
 
     {{-- Berita --}}
-    <section class="section bg-body-tertiary">
+    <section class="section posts-entry posts-entry-sm bg-body-tertiary">
         <div class="container">
+            <div class="row mb-4">
+                <div class="col-sm-6">
+                    <h2 class="posts-entry-title">Berita Terbaru</h2>
+                    <p>Update Kegiatan Pemerintah</p>
+                </div>
+                <div class="col-sm-6 text-sm-end"><a href="https://batubarakab.go.id/kategori/pemerintahan"
+                        class="read-more">Lihat Semua</a></div>
+            </div>
             <div class="row align-items-stretch retro-layout">
                 <div class="col-md-3">
                     @foreach ($berita['results'] as $b)
                         <a href="#" class="h-entry mb-30 v-height gradient">
                             <div class="featured-img" style="background-image: url('{{ $b['gambar'] }}');"> </div>
                             <div class="text">
-                                <h5 class="date">{{ $b['judul'] }}</h5>
-                                <h6><i class="bi bi-calendar"></i> {{ $b['tanggal'] }}</h6>
-                                <h6><i class="bi bi-eye"></i>{{ $b['dilihat'] }}x dilihat</h6>
+                                <h5 class="text-white">{{ $b['judul'] }}</h5>
+                                <h6 class="text-white"><i class="bi bi-calendar"></i> {{ $b['tanggal'] }}</h6>
+                                <h6 class="text-white"><i class="bi bi-eye"></i> {{ $b['dilihat'] }}x dilihat</h6>
                             </div>
                         </a>
                     @endforeach
