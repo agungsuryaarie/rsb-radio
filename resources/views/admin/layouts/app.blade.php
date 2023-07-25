@@ -41,7 +41,7 @@
                             class="nav-link dropdown-toggle nav-link-lg nav-link-user">
                             @if (isset(Auth::user()->profile->picture))
                                 <img alt="image"
-                                    src="{{ url('storage/userUpload/' . Auth::user()->id, Auth::user()->profile->picture) }}"
+                                    src="{{ url('storage/userUpload/' . Auth::user()->profile->picture) }}"
                                     class="rounded-circle mr-1">
                             @else
                                 <img alt="image" src="{{ asset('back-template/img/avatar/avatar-1.png') }}"
