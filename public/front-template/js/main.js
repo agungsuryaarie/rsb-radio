@@ -17,6 +17,12 @@
     $(window).on('load', function () {
         $(".loader").fadeOut();
         $("#preloder").delay(200).fadeOut("slow");
+
+        if ($('.playlist-area').length > 0) {
+            var containerEl = document.querySelector('.playlist-area');
+            var mixer = mixitup(containerEl);
+        }
+
     });
 
     /*------------------

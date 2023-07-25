@@ -255,7 +255,7 @@ kbd {
     font-weight: 700; }
 
 figure {
-  margin: 0 0 1rem; }
+  margin: 0 0 0; }
 
 img,
 svg {
@@ -9875,7 +9875,7 @@ textarea {
   max-width: 350px; }
   .retro-layout .text h2, .retro-layout .text .h2 {
     color: #fff;
-    font-size: 18px;
+    font-size: 15px;
     line-height: 1.2;
     margin-bottom: 0; }
   .retro-layout .text span {
@@ -10505,7 +10505,7 @@ textarea {
 .site-footer {
   background: #20232a;
   font-size: 14px;
-  padding: 70px 0;
+  padding: 70px 0 0;
   color: white; 
 }
   .site-footer a {

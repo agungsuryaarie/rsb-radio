@@ -33,6 +33,9 @@ Route::get('/watch', function () {
 Route::get('/playlist', function () {
     return view('playlist');
 });
+Route::get('/streaming', function () {
+    return view('streaming');
+});
 // Route::get('/galeri', function () {
 //     return view('galeri');
 // });

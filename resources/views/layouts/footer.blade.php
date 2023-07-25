@@ -1,49 +1,33 @@
 <footer class="site-footer bg-body-white shadow-lg">
     <div class="container">
-        <div class="row">
+        <div class="row-footer">
             <div class="col-lg-4">
                 <div class="widget">
-                    <h3 class="mb-4">About</h3>
+                    <div class="d-flex mb-3">
+                        <img src="{{ 'front-template/images/logo.png' }}" style="width: 150px">
+                    </div>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
                         live the blind texts.</p>
                 </div>
+
+            </div>
+            <div class="col-lg-4 ps-lg-5">
                 <div class="widget">
-                    <h3>Social</h3>
+                    <h3 class="mb-4">Diskominfo Kab. Batu Bara</h3>
+                    <p>Indrapura, Kec. Air Putih, Kabupaten Batu Bara, Sumatera Utara 21256</p>
+                </div>
+                <div class="widget">
+                    <h3>Ikuti Social Media Kami</h3>
                     <ul class="list-unstyled social">
                         <li><a href="#"><span class="icon-instagram"></span></a></li>
                         <li><a href="#"><span class="icon-twitter"></span></a></li>
                         <li><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li><a href="#"><span class="icon-linkedin"></span></a></li>
-                        <li><a href="#"><span class="icon-pinterest"></span></a></li>
-                        <li><a href="#"><span class="icon-dribbble"></span></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="col-lg-4 ps-lg-5">
-                <div class="widget">
-                    <h3 class="mb-4">Company</h3>
-                    <ul class="list-unstyled float-start links">
-                        <li><a href="#">About us</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Vision</a></li>
-                        <li><a href="#">Mission</a></li>
-                        <li><a href="#">Terms</a></li>
-                        <li><a href="#">Privacy</a></li>
-                    </ul>
-                    <ul class="list-unstyled float-start links">
-                        <li><a href="#">Partners</a></li>
-                        <li><a href="#">Business</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Creative</a></li>
+                        <li><a href="#"><span class="icon-youtube"></span></a></li>
                     </ul>
                 </div>
             </div>
         </div>
-        <div class="d-flex justify-content-center">
-            <img src="{{ 'front-template/images/logo.png' }}" style="width: 150px">
-        </div>
+
         <div class="row mt-5">
             <div class="col-12 text-center">
                 <p>Copyright &copy;
@@ -82,8 +66,17 @@
 <script src="{{ url('front-template/js/countdown.min.js') }}"></script>
 <script src="{{ url('front-template/js/slicknav.js') }}"></script>
 <script src="{{ url('front-template/js/owl.carousel.min.js') }}"></script>
+
+
+
 <script src="{{ url('front-template/js/jquery.jplayer.min.js') }}"></script>
+<script src="{{ url('front-template/js/wavesurfer.min.js') }}"></script>
+
+
+<script src="{{ url('front-template/js/WaveSurferInit.js') }}"></script>
 <script src="{{ url('front-template/js/jplayerInit.js') }}"></script>
+
+<script src="{{ url('front-template/js/mixitup.min.js') }}"></script>
 
 <script src="{{ url('front-template/js/main.js') }}"></script>
 <script src="{{ url('front-template/js/theme.js') }}"></script>
