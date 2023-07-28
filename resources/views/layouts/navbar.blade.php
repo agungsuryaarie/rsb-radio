@@ -71,8 +71,6 @@
                         up</a>
                 </div>
             </ul>
-
-
             {{-- <div class="top_player ">
                 <a href="https://live.pramborsfm.com/" target="_blank">
                     <div class="pic is-circle for-desktop ">
@@ -96,7 +94,11 @@
                             class="fa fa-play"></i> listening now</span></div>
             </a>
 
-
+            {{-- <div class="navbar-cta" role="search">
+                <a class="btn btn-outline-primary border-purple me-2 text-bold" href="{{ route('login') }}">Masuk</a>
+                <a class="btn btn-outline-primary border-purple me-2 text-purple"
+                    href="{{ route('register') }}">Daftar</a>
+            </div> --}}
         </div>
     </div>
 </nav>

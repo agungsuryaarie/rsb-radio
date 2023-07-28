@@ -61,7 +61,6 @@
             </div>
         </div>
     </section>
-
     <!-- Start posts-entry -->
     <section class="section posts-entry posts-entry-sm bg-body-tertiary">
         <div class="container">
@@ -89,7 +88,6 @@
             </div>
         </div>
     </section>
-
     <section class="section track spad youtube spad">
         <div class="container">
             <div class="row">
@@ -166,238 +164,6 @@
                         </div>
                     </div>
                 </div>
-                {{-- <div class="col-lg-6 p-0">
-                    <div class="track__content nice-scroll" tabindex="1" style="overflow-y: hidden; outline: none;">
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_1"
-                                data-url="{{ 'front-template/music-files/1.mp3' }}" id="jp_jplayer_0"
-                                style="width: 0px; height: 0px;"><img id="jp_poster_0"
-                                    style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_0"
-                                    preload="metadata" src="{{ 'front-template/music-files/1.mp3' }}"></audio>
-                            </div>
-                            <div class="jp-audio jp_container_1" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                    </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar" style="width: 100%;">
-                                                <div>
-                                                    <div class="jp-play-bar" style="width: 0%;">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">
-                                                            00:00</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">01:22</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 80%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_2"
-                                data-url="{{ 'front-template/music-files/1.mp3' }}" id="jp_jplayer_1"
-                                style="width: 0px; height: 0px;"><img id="jp_poster_1"
-                                    style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_1"
-                                    preload="metadata" src="{{ 'front-template/music-files/1.mp3' }}"></audio>
-                            </div>
-                            <div class="jp-audio jp_container_2" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                    </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar" style="width: 100%;">
-                                                <div>
-                                                    <div class="jp-play-bar" style="width: 0%;">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">
-                                                            00:00</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">01:02</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 80%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_3" data-url="music-files/3.mp3"
-                                id="jp_jplayer_2" style="width: 0px; height: 0px;"><img id="jp_poster_2"
-                                    style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_2"
-                                    preload="metadata"
-                                    src="file:///C:/Users/ASUS/Downloads/Djoz-master/Djoz-master/music-files/3.mp3"></audio>
-                            </div>
-                            <div class="jp-audio jp_container_3" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                    </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar" style="width: 100%;">
-                                                <div>
-                                                    <div class="jp-play-bar" style="width: 0%;">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">
-                                                            00:00</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">03:10</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 80%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_4" data-url="music-files/4.mp3"
-                                id="jp_jplayer_3" style="width: 0px; height: 0px;"><img id="jp_poster_3"
-                                    style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_3"
-                                    preload="metadata"
-                                    src="file:///C:/Users/ASUS/Downloads/Djoz-master/Djoz-master/music-files/4.mp3"></audio>
-                            </div>
-                            <div class="jp-audio jp_container_4" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                    </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar" style="width: 100%;">
-                                                <div>
-                                                    <div class="jp-play-bar" style="width: 0%;">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">
-                                                            00:00</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">01:00</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 80%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_5" data-url="music-files/5.mp3"
-                                id="jp_jplayer_4" style="width: 0px; height: 0px;"><img id="jp_poster_4"
-                                    style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_4"
-                                    preload="metadata"
-                                    src="file:///C:/Users/ASUS/Downloads/Djoz-master/Djoz-master/music-files/5.mp3"></audio>
-                            </div>
-                            <div class="jp-audio jp_container_5" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                    </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar" style="width: 100%;">
-                                                <div>
-                                                    <div class="jp-play-bar" style="width: 0%;">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">
-                                                            00:00</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">01:19</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 80%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="single_player_container">
-                            <h4>David Guetta Miami Ultra</h4>
-                            <div class="jp-jplayer jplayer" data-ancestor=".jp_container_6" data-url="music-files/6.mp3"
-                                id="jp_jplayer_5" style="width: 0px; height: 0px;"><img id="jp_poster_5"
-                                    style="width: 0px; height: 0px; display: none;"><audio id="jp_audio_5"
-                                    preload="metadata"
-                                    src="file:///C:/Users/ASUS/Downloads/Djoz-master/Djoz-master/music-files/6.mp3"></audio>
-                            </div>
-                            <div class="jp-audio jp_container_6" role="application" aria-label="media player">
-                                <div class="jp-gui jp-interface">
-                                    <!-- Player Controls -->
-                                    <div class="player_controls_box">
-                                        <button class="jp-play player_button" tabindex="0"></button>
-                                    </div>
-                                    <!-- Progress Bar -->
-                                    <div class="player_bars">
-                                        <div class="jp-progress">
-                                            <div class="jp-seek-bar" style="width: 100%;">
-                                                <div>
-                                                    <div class="jp-play-bar" style="width: 0%;">
-                                                        <div class="jp-current-time" role="timer" aria-label="time">
-                                                            00:00</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="jp-duration ml-auto" role="timer" aria-label="duration">01:00</div>
-                                    </div>
-                                    <!-- Volume Controls -->
-                                    <div class="jp-volume-controls">
-                                        <button class="jp-mute" tabindex="0"><i class="fa fa-volume-down"></i></button>
-                                        <div class="jp-volume-bar">
-                                            <div class="jp-volume-bar-value" style="width: 80%;"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div> --}}
                 <div class="col-lg-6 p-0 order-lg-2">
                     <div class="tours__item__pic">
                         <img src="{{ 'front-template/images/tour-1.jpg' }}" alt="">
@@ -412,7 +178,7 @@
         <div class="container">
             <div class="row mb-4">
                 <div class="col-sm-6">
-                    <h2 class="posts-entry-title">WADYABALA DJ AND CREWS</h2>
+                    <h2 class="posts-entry-title">Penyiar Radio</h2>
                 </div>
             </div>
             <div class="row">
@@ -467,6 +233,38 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    {{-- Berita --}}
+    <section class="section posts-entry posts-entry-sm bg-body-tertiary">
+        <div class="container">
+            <div class="row mb-4">
+                <div class="col-sm-6">
+                    <h2 class="posts-entry-title">Berita Terbaru</h2>
+                    <p>Update Kegiatan Pemerintah</p>
+                </div>
+                <div class="col-sm-6 text-sm-end"><a href="https://batubarakab.go.id/kategori/pemerintahan"
+                        class="read-more">Lihat Semua</a></div>
+            </div>
+            <div class="row d-flex align-items-stretch retro-layout">
+                @foreach ($berita['results'] as $b)
+                    <div class="col-md-3">
+                        <a href="#" class="h-entry mb-30 v-height gradient">
+                            <div class="featured-img" style="background-image: url('{{ $b['gambar'] }}');"> </div>
+                            <div class="text">
+                                <h5 class="text-white">{{ $b['judul'] }}</h5>
+                                <div class="d-flex">
+                                    <span class="text-white mr-3"><i class="bi bi-calendar"></i>
+                                        {{ $b['tanggal'] }}</span> &nbsp;
+                                    <span class="text-white"><i class="bi bi-eye"></i> {{ $b['dilihat'] }}x
+                                        dilihat</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                @endforeach
             </div>
         </div>
     </section>

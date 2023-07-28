@@ -9873,6 +9873,10 @@ textarea {
   z-index: 10;
   padding: 20px;
   max-width: 350px; }
+  
+.retro-layout .text h5 {
+  font-size: 15px;
+ }
   .retro-layout .text h2, .retro-layout .text .h2 {
     color: #fff;
     font-size: 15px;
@@ -10051,8 +10055,8 @@ textarea {
       margin-bottom: 0;
       border-radius: 10px; }
 
-.read-more {
-  border-bottom: 2px solid #214252; }
+/* .read-more {
+  border-bottom: 2px solid #214252; } */
 
 .post-entry-alt h2, .post-entry-alt .h2 {
   font-size: 18px;

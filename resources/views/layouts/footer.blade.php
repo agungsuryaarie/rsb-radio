@@ -9,7 +9,6 @@
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
                         live the blind texts.</p>
                 </div>
-
             </div>
             <div class="col-lg-4 ps-lg-5">
                 <div class="widget">
@@ -66,8 +65,6 @@
 <script src="{{ url('front-template/js/countdown.min.js') }}"></script>
 <script src="{{ url('front-template/js/slicknav.js') }}"></script>
 <script src="{{ url('front-template/js/owl.carousel.min.js') }}"></script>
-
-
 
 <script src="{{ url('front-template/js/jquery.jplayer.min.js') }}"></script>
 <script src="{{ url('front-template/js/wavesurfer.min.js') }}"></script>

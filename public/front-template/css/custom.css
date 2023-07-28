@@ -350,8 +350,8 @@
 	z-index: -1;
 }
 .track {
-	padding-top: 100px;
-	padding-bottom: 40px;
+	padding-top: 80px;
+	padding-bottom: 80px;
 	overflow: hidden;
 }
 
@@ -429,7 +429,7 @@
 .jp-play-bar {
 	position: relative;
 	height: 100%;
-	background: #5c00ce;
+	background: #ce2600;
 	overflow: visible !important;
 }
 
@@ -1325,6 +1325,8 @@
 .bg-red{
 	background: #da3a22;
 }
+
+
 
 
 /* Music Streaming */
