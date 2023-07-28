@@ -15,8 +15,11 @@
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ route('article.index') }}">Berita</a>
                 </li>
-                <li class="nav-item">
+                {{-- <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/playlist">Daftar Putar</a>
+                </li> --}}
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/penyiar">Penyiar</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="/watch">Tonton</a>

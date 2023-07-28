@@ -636,6 +636,44 @@
 }
 
 /*---------------------
+  About
+-----------------------*/
+
+.about {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.about.about--page {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+
+.about.about--page .section-title {
+	margin-bottom: 28px;
+}
+
+.about.about--page .section-title h2 {
+	line-height: 55px;
+}
+
+.about.about--page .about__text {
+	padding-top: 15px;
+}
+
+.about.about--page .about__text p {
+	color: #111111;
+}
+
+.about__text {
+	padding-top: 110px;
+}
+
+.about__text p {
+	margin-bottom: 35px;
+}
+
+/*---------------------
   About Services
 -----------------------*/
 

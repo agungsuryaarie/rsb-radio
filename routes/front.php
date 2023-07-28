@@ -36,6 +36,9 @@ Route::get('/playlist', function () {
 Route::get('/streaming', function () {
     return view('streaming');
 });
+Route::get('/penyiar', function () {
+    return view('penyiar');
+});
 // Route::get('/galeri', function () {
 //     return view('galeri');
 // });

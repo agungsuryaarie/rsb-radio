@@ -290,7 +290,7 @@
                             <a href="{{ $v->link }}" class="play-btn video-popup"><i class="fa fa-play"></i></a>
                             <div class="videos__large__item__text">
                                 <h4>{{ $v->title }}</h4>
-                                <ul>
+                                <ul style="padding-left: 0">
                                     <li>{{ \Carbon\Carbon::parse($v->created_at)->format('H:i:s') }}</li>
                                     <li>{{ \Carbon\Carbon::parse($v->created_at)->format('Y-m-d') }}</li>
                                 </ul>
@@ -314,7 +314,7 @@
                                     </div>
                                     <div class="videos__item__text">
                                         <h5>{{ $v1->title }}</h5>
-                                        <ul>
+                                        <ul style="padding-left: 0">
                                             <li>{{ \Carbon\Carbon::parse($v1->created_at)->format('H:i:s') }}</li>
                                             <li>{{ \Carbon\Carbon::parse($v1->created_at)->format('Y-m-d') }}</li>
                                         </ul>
