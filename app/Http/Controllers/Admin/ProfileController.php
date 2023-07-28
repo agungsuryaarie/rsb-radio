@@ -7,6 +7,7 @@ use App\Models\Post;
 use App\Models\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
@@ -20,8 +21,6 @@ class ProfileController extends Controller
 
     public function store(Request $request)
     {
-        $filename = null; // Inisialisasi variabel $filename sebagai null
-
         if ($request->hasFile('picture')) {
             $image = $request->file('picture');
             $filename = time() . '.' . $image->getClientOriginalExtension();
@@ -31,7 +30,12 @@ class ProfileController extends Controller
         }
         if ($request->hidden_id) {
             $data = Profile::where('user_id', $request->hidden_id)->first();
-            if (isset($data->picture)) {
+            if ($request->hasFile('picture')) {
+                $image = $request->file('picture');
+                $filename = time() . '.' . $image->getClientOriginalExtension();
+                $image->storeAs('public/userUpload/', $filename);
+                Storage::delete('public/userUpload/' . $data->picture);
+            } else {
                 $filename = $data->picture;
             }
         }
