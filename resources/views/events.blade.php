@@ -16,7 +16,7 @@
                                         <img src="{{ url('storage/event', $e->cover) }}" alt="Image" class="img-fluid">
                                     </a>
                                     <h2><a class="nav-link active" href="#">{{ $e->title }} </a></h2>
-                                    <span class="date">Apr. 14th, 2022</span>
+                                    <span class="date">{{ $e->created_at }}</span>
                                 </div>
                             </div>
                         @endforeach

@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-lg navbar-light sticky-top border-1"data-navbar-on-scroll="data-navbar-on-scroll">
     <div class="container">
-        <a href="index.html" class="logo m-0 float-start"><img src="{{ 'front-template/images/logo-black.png' }}"
+        <a href="index.html" class="logo m-0 float-start"><img src="{{ url('front-template/images/logo-black.png') }}"
                 style="width: 100px"></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">

@@ -52,7 +52,7 @@
                                 style="background-image: url('{{ url('storage/post', $a2->image) }}');">
                             </div>
                             <div class="text">
-                                <span class="date">Apr. 14th, 2022</span>
+                                <span class="date">{{ $a2->created_at }}</span>
                                 <h2>{{ $a2->title }}</h2>
                             </div>
                         </a>
@@ -238,6 +238,7 @@
     </section>
 
     {{-- Berita --}}
+
     <section class="section posts-entry posts-entry-sm bg-body-tertiary">
         <div class="container">
             <div class="row mb-4">
@@ -248,23 +249,25 @@
                 <div class="col-sm-6 text-sm-end"><a href="https://batubarakab.go.id/kategori/pemerintahan"
                         class="read-more">Lihat Semua</a></div>
             </div>
-            <div class="row d-flex align-items-stretch retro-layout">
-                @foreach ($berita['results'] as $b)
-                    <div class="col-md-3">
-                        <a href="#" class="h-entry mb-30 v-height gradient">
-                            <div class="featured-img" style="background-image: url('{{ $b['gambar'] }}');"> </div>
-                            <div class="text">
-                                <h5 class="text-white">{{ $b['judul'] }}</h5>
-                                <div class="d-flex">
-                                    <span class="text-white mr-3"><i class="bi bi-calendar"></i>
-                                        {{ $b['tanggal'] }}</span> &nbsp;
-                                    <span class="text-white"><i class="bi bi-eye"></i> {{ $b['dilihat'] }}x
-                                        dilihat</span>
+            <div class="row retro-layout">
+                <div class="news__slider owl-carousel">
+                    @foreach ($berita['results'] as $b)
+                        <div class="col-md-11">
+                            <a href="#" class="h-entry mb-30 p-height gradient">
+                                <div class="featured-img" style="background-image: url('{{ $b['gambar'] }}');"> </div>
+                                <div class="text">
+                                    <h5 class="text-white">{{ $b['judul'] }}</h5>
+                                    <div class="d-flex">
+                                        <span class="text-white mr-3"><i class="bi bi-calendar"></i>
+                                            {{ $b['tanggal'] }}</span> &nbsp;
+                                        <span class="text-white"><i class="bi bi-eye"></i> {{ $b['dilihat'] }}x
+                                            dilihat</span>
+                                    </div>
                                 </div>
-                            </div>
-                        </a>
-                    </div>
-                @endforeach
+                            </a>
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
     </section>

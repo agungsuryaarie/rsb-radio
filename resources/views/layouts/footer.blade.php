@@ -4,7 +4,7 @@
             <div class="col-lg-4">
                 <div class="widget">
                     <div class="d-flex mb-3">
-                        <img src="{{ 'front-template/images/logo.png' }}" style="width: 150px">
+                        <img src="{{ url('front-template/images/logo.png') }}" style="width: 150px">
                     </div>
                     <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
                         live the blind texts.</p>

@@ -9817,6 +9817,8 @@ textarea {
   height: 210px; }
 .retro-layout .b-height {
   height: 451px; }
+.retro-layout .p-height {
+  height: 300px; }
 
 @media (max-width: 767.98px) {
   .retro-layout .img {
