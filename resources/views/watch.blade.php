@@ -7,7 +7,7 @@
                 <div class="col-lg-12">
                     <div class="section-title center-title">
                         <h2>Video Youtube</h2>
-                        <h1>Radio Suara Batu Bara</h1>
+                        <h1>Latest Videos</h1>
                     </div>
                     <div class="row">
                         @foreach ($video as $v)
@@ -24,7 +24,7 @@
                                     </div>
                                     <div class="videos__item__text">
                                         <h5>{{ $v->title }}</h5>
-                                        <ul>
+                                        <ul style="padding-left: 0">
                                             <li>{{ \Carbon\Carbon::parse($v->created_at)->format('H:i:s') }}</li>
                                             <li>{{ \Carbon\Carbon::parse($v->created_at)->format('Y-m-d') }}</li>
                                         </ul>

@@ -238,7 +238,8 @@
                 <div class="col-sm-6">
                     <h2 class="posts-entry-title">Tonton Video</h2>
                 </div>
-                <div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">Lihat Semua</a></div>
+                <div class="col-sm-6 text-sm-end"><a href="{{ route('watch.index') }}" class="read-more">Lihat Semua</a>
+                </div>
             </div>
 
             <div class="row align-items-stretch retro-layout-alt">
