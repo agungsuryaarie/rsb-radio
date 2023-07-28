@@ -14,7 +14,7 @@
     <x-ajaxModel size="">
         <x-input type="text" name="title" label="Judul"></x-input>
         <div class="form-group">
-            <label for="Deskripsi">Deskripsi</label>
+            <label for="Deskripsi">Deskripsi <span class="text-danger">*</span></label>
             <textarea name="description" id="description" class="form-control"></textarea>
         </div>
         <x-input type="text" name="link" label="Link"></x-input>

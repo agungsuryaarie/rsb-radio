@@ -76,7 +76,7 @@
             // Edit
             var editUrl = "{{ route('user.index') }}";
             var editHeading = "Edit User";
-            var field = ['name', 'email', 'role', 'broadcaster']; // disesuaikan dengan data yang ingin di tampilkan
+            var field = ['name', 'email', 'role', 'host']; // disesuaikan dengan data yang ingin di tampilkan
             editModel(editUrl, editHeading, field)
 
             // Save

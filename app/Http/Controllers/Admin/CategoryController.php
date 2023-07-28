@@ -34,7 +34,7 @@ class CategoryController extends Controller
     {
         //Translate Bahasa Indonesia
         $message = array(
-            'name.required' => 'Role harus dipilih.',
+            'name.required' => 'Nama Kategori harus diisi.',
         );
 
         $validator = Validator::make($request->all(), [

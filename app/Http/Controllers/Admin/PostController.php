@@ -54,6 +54,7 @@ class PostController extends Controller
             'category_id.required'    => 'Kategori harus dipilih.',
             'content.required'          => 'Konten harus diisi.',
             'status.required'           => 'Status harus dipilih.',
+            'image.required' => 'Gambar harus diupload.',
         );
 
         // Validasi input dengan rule yang ditentukan
