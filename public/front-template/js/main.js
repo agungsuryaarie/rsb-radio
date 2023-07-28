@@ -69,7 +69,7 @@
         Videos Slider
     ----------------------------*/
     $(".videos__slider").owlCarousel({
-        loop: true,
+        loop: false,
         margin: 0,
         items: 4,
         dots: false,
@@ -157,7 +157,7 @@
 
 
     /**
-     * Initiate portfolio lightbox 
+     * Initiate portfolio lightbox
      */
     const portfolioLightbox = GLightbox({
         selector: '.galeri-lightbox'

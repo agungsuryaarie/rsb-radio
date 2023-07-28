@@ -183,55 +183,15 @@
             </div>
             <div class="row">
                 <div class="videos__slider owl-carousel">
-                    <div class="col-videos">
-                        <div class="blog__item">
-                            <div class="blog__item__pic">
-                                <img src="{{ 'front-template/images/crew-1.png' }}" alt="">
+                    @foreach ($penyiar as $pr)
+                        <div class="col-videos">
+                            <div class="blog__item">
+                                <div class="blog__item__pic">
+                                    <img src="{{ url('storage/userUpload', $pr->picture) }}" alt="">
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-videos">
-                        <div class="blog__item">
-                            <div class="blog__item__pic">
-                                <img src="{{ 'front-template/images/crew-2.png' }}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-videos">
-                        <div class="blog__item">
-                            <div class="blog__item__pic">
-                                <img src="{{ 'front-template/images/crew-3.png' }}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-videos">
-                        <div class="blog__item">
-                            <div class="blog__item__pic">
-                                <img src="{{ 'front-template/images/crew-4.png' }}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-videos">
-                        <div class="blog__item">
-                            <div class="blog__item__pic">
-                                <img src="{{ 'front-template/images/crew-5.png' }}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-videos">
-                        <div class="blog__item">
-                            <div class="blog__item__pic">
-                                <img src="{{ 'front-template/images/crew-6.png' }}" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-videos">
-                        <div class="blog__item">
-                            <div class="blog__item__pic">
-                                <img src="{{ 'front-template/images/crew-7.png' }}" alt="">
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
                 </div>
             </div>
         </div>
