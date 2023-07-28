@@ -22,7 +22,7 @@
                     <a class="nav-link active" aria-current="page" href="/penyiar">Penyiar</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/watch">Tonton</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('watch.index') }}">Tonton</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ route('galeri.index') }}">Galeri</a>

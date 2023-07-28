@@ -1,3 +1,6 @@
+ 
+  @import url('https://fonts.cdnfonts.com/css/rockville-solid');
+ 
  /*---------------------
   Tours
 -----------------------*/
@@ -164,6 +167,7 @@
 	-ms-flex-pack: center;
 	justify-content: center;
 	margin-bottom: 30px;
+	border-radius: 5px;
 }
 
 .videos__large__item .play-btn {
@@ -494,9 +498,24 @@
 	margin-bottom: 0;
 }
 
-.single_player_container h4 {
-	font-size: 26px;
-	color: #111111;
+.stream-title{
+	font-size: 30px;
+    color: #cb3030;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.stream-sub{
+	font-size: 20px;
+    color: #111111;
+    font-weight: 700;
+    margin-bottom: 50px;
+}
+
+/* .single_player_container h4 {
+    font-size: 30px;
+    color: #cb3030;
 	font-weight: 700;
 	margin-bottom: 20px;
 	text-transform: uppercase;
@@ -506,8 +525,8 @@
 	color: #111111;
 	font-weight: 700;
 	margin-bottom: 50px;
-	/* text-transform: uppercase; */
-}
+	text-transform: uppercase;
+} */
 
 .track__pic {
 	position: relative;

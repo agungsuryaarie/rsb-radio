@@ -28,9 +28,7 @@ use App\Http\Controllers\WatchController;
 Route::get('/events', function () {
     return view('events');
 });
-Route::get('/watch', function () {
-    return view('watch');
-});
+
 Route::get('/playlist', function () {
     return view('playlist');
 });
