@@ -53,6 +53,7 @@ class ProgramController extends Controller
             'name.required'            => 'Judul Program harus diisi.',
             'host.required'            => 'Penyiar harus dipilih.',
             'description.required'     => 'Deskripsi harus diisi.',
+            'cover.required' => 'Cover harus diupload.',
         );
 
         // Validasi input dengan rule yang ditentukan

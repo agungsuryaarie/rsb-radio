@@ -51,4 +51,4 @@ Route::get('/events', [EventsController::class, 'index'])->name('events.index');
 Route::get('/article', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/{article:slug}', [ArticleController::class, 'show'])->name('article.show');
 // Watch
-Route::get('/watch', [WatchController::class, 'index'])->name('video.index');
+Route::get('/watch', [WatchController::class, 'index'])->name('watch.index');

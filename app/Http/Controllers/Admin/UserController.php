@@ -47,11 +47,12 @@ class UserController extends Controller
     {
         //Translate Bahasa Indonesia
         $message = array(
-            'role.required'                     => 'Role harus dipilih.',
             'name.required'                     => 'Nama harus diisi.',
             'email.required'                    => 'Email harus diisi.',
             'email.email'                       => 'Penulisan email tidak benar.',
             'email.unique'                      => 'Email sudah terdaftar.',
+            'role.required'                     => 'Role harus dipilih.',
+            'host.required'                     => 'Penyiar harus dipilih.',
             'password.required'                 => 'Password harus diisi.',
             'password.min'                      => 'Password minimal 8 karakter.',
             'password_confirmation.required'    => 'Harap konfirmasi password.',
@@ -75,11 +76,12 @@ class UserController extends Controller
 
         // Validasi input dengan rule yang ditentukan
         $validator = Validator::make($request->all(), [
-            'role'                  => 'required',
             'name'                  => 'required',
             'email'                 =>  $ruleEmail,
-            'password'              => $request->input('password') ? 'required|min:8' : '',
-            'password_confirmation' => $request->input('password') ? 'required|same:password|min:8' : '',
+            'role'                  => 'required',
+            'host'                  => 'required',
+            'password'              => $request->input('password') ? 'required|min:8' : 'required',
+            'password_confirmation' => $request->input('password') ? 'required|same:password|min:8' : 'required',
         ], $message);
 
         if ($validator->fails()) {
