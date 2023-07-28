@@ -40,11 +40,12 @@
             <a class="nav-link" href="{{ route('video.index') }}"><i class="fas fa-video"></i>
                 <span>Video</span></a>
         </li>
-        <li class="{{ request()->segment(2) == 'user' ? 'active' : '' }}">
-            <a class="nav-link" href="{{ route('user.index') }}"><i class="fas fa-users"></i>
-                <span>User</span></a>
-        </li>
-
+        @if (Auth::user()->role == 1 && Auth::user()->host == 0)
+            <li class="{{ request()->segment(2) == 'user' ? 'active' : '' }}">
+                <a class="nav-link" href="{{ route('user.index') }}"><i class="fas fa-users"></i>
+                    <span>User</span></a>
+            </li>
+        @endif
         <li class="{{ request()->segment(2) == 'profile' ? 'active' : '' }}">
             <a class="nav-link" href="{{ route('profile.index') }}"><i class="far fa-user"></i>
                 <span>Profile</span></a>

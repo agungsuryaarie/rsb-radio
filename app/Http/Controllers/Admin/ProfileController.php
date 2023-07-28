@@ -26,11 +26,14 @@ class ProfileController extends Controller
             $image = $request->file('picture');
             $filename = time() . '.' . $image->getClientOriginalExtension();
             $image->storeAs('public/userUpload/', $filename);
+        } else {
+            $filename = null;
         }
-
-        $data = Profile::where('user_id', $request->hidden_id)->first();
-        if (isset($data->picture)) {
-            $oldImage = $data->picture;
+        if ($request->hidden_id) {
+            $data = Profile::where('user_id', $request->hidden_id)->first();
+            if (isset($data->picture)) {
+                $filename = $data->picture;
+            }
         }
         // Memperbarui profil atau membuat baru jika tidak ada
         Profile::updateOrCreate(
@@ -50,7 +53,7 @@ class ProfileController extends Controller
                 'instagram' => $request->instagram,
                 'twitter' => $request->twitter,
                 'tiktok' => $request->tiktok,
-                'picture' => $filename ?: $oldImage // Menggunakan gambar lama jika tidak ada gambar yang diunggah
+                'picture' => $filename,
             ]
         );
 
