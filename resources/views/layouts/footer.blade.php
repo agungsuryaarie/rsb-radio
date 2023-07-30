@@ -66,14 +66,11 @@
 <script src="{{ url('front-template/js/slicknav.js') }}"></script>
 <script src="{{ url('front-template/js/owl.carousel.min.js') }}"></script>
 
-<script src="{{ url('front-template/js/jquery.jplayer.min.js') }}"></script>
+{{-- <script src="{{ url('front-template/js/jquery.jplayer.min.js') }}"></script>
 <script src="{{ url('front-template/js/wavesurfer.min.js') }}"></script>
-
-
 <script src="{{ url('front-template/js/WaveSurferInit.js') }}"></script>
 <script src="{{ url('front-template/js/jplayerInit.js') }}"></script>
-
-<script src="{{ url('front-template/js/mixitup.min.js') }}"></script>
+<script src="{{ url('front-template/js/mixitup.min.js') }}"></script> --}}
 
 <script src="{{ url('front-template/js/main.js') }}"></script>
 <script src="{{ url('front-template/js/theme.js') }}"></script>

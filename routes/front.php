@@ -7,6 +7,7 @@ use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\WatchController;
+use App\Http\Controllers\PenyiarController;
 
 /*
 |--------------------------------------------------------------------------
@@ -35,9 +36,7 @@ Route::get('/playlist', function () {
 Route::get('/streaming', function () {
     return view('streaming');
 });
-Route::get('/penyiar', function () {
-    return view('penyiar');
-});
+
 // Route::get('/galeri', function () {
 //     return view('galeri');
 // });
@@ -56,3 +55,5 @@ Route::get('/article', [ArticleController::class, 'index'])->name('article.index
 Route::get('/article/{article:slug}', [ArticleController::class, 'show'])->name('article.show');
 // Watch
 Route::get('/watch', [WatchController::class, 'index'])->name('watch.index');
+// Penyiar
+Route::get('/penyiar', [PenyiarController::class, 'index'])->name('penyiar.index');

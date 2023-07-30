@@ -35,8 +35,9 @@
     <link rel="stylesheet" href="{{ url('front-template/css/slicknav.min.css') }}">
     <link rel="stylesheet" href="{{ url('front-template/css/style.css') }}">
     <link rel="stylesheet" href="{{ url('front-template/css/custom.css') }}">
-
     <link rel="stylesheet" href="{{ url('front-template/css/flatpickr.min.css') }}">
+
+    <script src="{{ url('front-template/js/scripts.js') }}" defer></script>
 
 
     <title>Radio Suara Batu Bara</title>

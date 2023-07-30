@@ -187,7 +187,8 @@
                         <div class="col-videos">
                             <div class="blog__item">
                                 <div class="blog__item__pic">
-                                    <img src="{{ url('storage/userUpload', $pr->picture) }}" alt="">
+                                    <img src="{{ url('storage/userUpload', $pr->picture) }}" alt=""
+                                        class="rounded-full">
                                 </div>
                             </div>
                         </div>

@@ -10,25 +10,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('home.index') }}">Beranda</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('home.index') }}">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('article.index') }}">Berita</a>
-                </li>
-                {{-- <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/playlist">Daftar Putar</a>
-                </li> --}}
-                <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/penyiar">Penyiar</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('article.index') }}">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('watch.index') }}">Tonton</a>
+                    <a class="nav-link active" aria-current="page" href="/program">Program</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('galeri.index') }}">Galeri</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('watch.index') }}">Watch</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="{{ route('galeri.index') }}">Galery</a>
                 </li>
                 <li class="nav-item me-2">
-                    <a class="nav-link active" aria-current="page" href="{{ route('events.index') }}">Acara</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('events.index') }}">Events</a>
                 </li>
 
                 {{-- <li class="nav-item dropdown">

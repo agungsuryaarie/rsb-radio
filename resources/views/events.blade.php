@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-    <section class="section bg-body-tertiary posts-entry">
+    <section class="events bg-body-tertiary posts-entry">
         <div class="container">
             <div class="section-title center-title">
                 <h2>Events</h2>
