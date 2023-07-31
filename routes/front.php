@@ -7,6 +7,7 @@ use App\Http\Controllers\GaleriController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\WatchController;
+use App\Http\Controllers\ProgramsController;
 use App\Http\Controllers\PenyiarController;
 
 /*
@@ -55,5 +56,8 @@ Route::get('/article', [ArticleController::class, 'index'])->name('article.index
 Route::get('/article/{article:slug}', [ArticleController::class, 'show'])->name('article.show');
 // Watch
 Route::get('/watch', [WatchController::class, 'index'])->name('watch.index');
+// Program
+Route::get('/programs', [ProgramsController::class, 'index'])->name('programs.index');
+Route::get('/programs/{programs:slug}', [ProgramsController::class, 'show'])->name('programs.show');
 // Penyiar
 Route::get('/penyiar', [PenyiarController::class, 'index'])->name('penyiar.index');

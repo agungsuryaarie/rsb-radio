@@ -2,16 +2,6 @@
 
 
 @section('content')
-    {{-- <div class="container pt-2">
-        <div class="row align-items-stretch retro-layout-alt">
-            <div class="col-md-12">
-                <a href="single.html" class="img-link"><img src="{{ 'front-template/images/baner2.png' }}" alt="Image"
-                        class="img-baner"></a>
-            </div>
-        </div>
-    </div> --}}
-
-
     <section class="section bg-body-tertiary">
         <div class="container">
             <div class="row align-items-stretch retro-layout">
@@ -61,110 +51,41 @@
             </div>
         </div>
     </section>
-    <!-- Start posts-entry -->
-    <section class="section posts-entry posts-entry-sm bg-body-tertiary">
-        <div class="container">
-            <div class="row mb-4">
-                <div class="col-sm-6">
-                    <h2 class="posts-entry-title">Program Unggulan</h2>
-                </div>
-                <div class="col-sm-6 text-sm-end"><a href="category.html" class="read-more">Lihat Semua</a></div>
-            </div>
-            <div class="row">
-                @foreach ($program as $p)
-                    <div class="col-md-6 col-lg-3">
-                        <div class="blog-entry">
-                            <a href="single.html">
-                                <div class="container-image">
-                                    <img src="{{ url('storage/program', $p->cover) }}" class="image">
-                                    <div class="overlay">
-                                        <div class="text-program">{{ $p->name }}</div>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                @endforeach
-            </div>
-        </div>
-    </section>
+
     <section class="section track spad youtube spad">
         <div class="container">
             <div class="row">
                 <div class="col-lg-7">
                     <div class="section-title">
-                        <h2>Playlist Tracks</h2>
-                        <h1>Playlist Tracks</h1>
+                        <h2>Program Unggulan</h2>
+                        <h1>Program Unggulan</h1>
                     </div>
                 </div>
                 <div class="col-lg-5">
                     <div class="track__all">
-                        <a href="/playlist" class="primary-btn border-btn">Lihat Semua Track</a>
+                        <a href="{{ route('programs.index') }}" class="primary-btn border-btn">Lihat Semua</a>
                     </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-between">
                 <div class="col-lg-6 col-md-6 col-sm-6 mb-100">
                     <div class="title-entry">
-                        <h3>NEW ENTRY</h3>
-                        <p>Edition : 30 Juni 2023</p>
+                        <h5>RSB menyediakan beragam program untuk menemani hari-hari anda</h5>
                     </div>
                     <div class="track__content nice-scroll" tabindex="1" style="overflow-y: hidden; outline: none;">
-                        <div class="youtube__item">
-                            <div class="youtube__item__pic set-bg" data-setbg="{{ 'front-template/images/dj-1.jpg' }}"
-                                style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
-                                <a href="https://www.youtube.com/watch?v=FXU0uy0GAQM" class="play-btn video-popup"><i
-                                        class="fa fa-play"></i></a>
-                            </div>
-                            <div class="youtube__item__text">
-                                <h4>David Guetta Miami Ultra Music Festival 2019</h4>
-                                <i class="bi bi-youtube"></i> Rianta Surbakti
-                            </div>
-                        </div>
-                        <div class="youtube__item">
-                            <div class="youtube__item__pic set-bg" data-setbg="{{ 'front-template/images/dj-2.jpg' }}"
-                                style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
-                                <a href="https://www.youtube.com/watch?v=7Boy7DHbcvc" class="play-btn video-popup"><i
-                                        class="fa fa-play"></i></a>
-                            </div>
-                            <div class="youtube__item__text">
-                                <h4>David Guetta Miami Ultra Music Festival 2019</h4>
-                                <i class="bi bi-youtube"></i> Rianta Surbakti
-                            </div>
-                        </div>
-                        <div class="youtube__item">
-                            <div class="youtube__item__pic set-bg" data-setbg="{{ 'front-template/images/img-video.jpg' }}"
-                                style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
-                                <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
-                                    class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                            </div>
-                            <div class="youtube__item__text">
-                                <h4>David Guetta Miami Ultra Music Festival 2019</h4>
-                            </div>
-                        </div>
-                        <div class="youtube__item">
-                            <div class="youtube__item__pic set-bg" data-setbg="{{ 'front-template/images/img-video.jpg' }}"
-                                style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
-                                <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
-                                    class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                            </div>
-                            <div class="youtube__item__text">
-                                <h4>David Guetta Miami Ultra Music Festival 2019</h4>
-                            </div>
-                        </div>
-                        <div class="youtube__item">
-                            <div class="youtube__item__pic set-bg" data-setbg="{{ 'front-template/images/img-video.jpg' }}"
-                                style="background-image: url(&quot;img/youtube/youtube-1.jpg&quot;);">
-                                <a href="https://www.youtube.com/watch?v=yJg-Y5byMMw?autoplay=1"
-                                    class="play-btn video-popup"><i class="fa fa-play"></i></a>
-                            </div>
-                            <div class="youtube__item__text">
-                                <h4>David Guetta Miami Ultra Music Festival 2019</h4>
-                            </div>
-                        </div>
+                        @foreach ($programs as $p)
+                            <a href="{{ route('programs.show', $p->slug) }}">
+                                <div class="program__item">
+                                    <img src="{{ url('storage/program', $p->cover) }}">
+                                    <div class="youtube__item__text">
+                                        <h4>{{ $p->name }}</h4>
+                                    </div>
+                                </div>
+                            </a>
+                        @endforeach
                     </div>
                 </div>
-                <div class="col-lg-6 p-0 order-lg-2">
+                <div class="col-lg-5 p-0 order-lg-2">
                     <div class="tours__item__pic">
                         <img src="{{ 'front-template/images/tour-1.jpg' }}" alt="">
                     </div>
@@ -173,7 +94,6 @@
         </div>
     </section>
 
-    <!-- Start posts-entry -->
     <section class="section posts-entry posts-entry-sm ">
         <div class="container">
             <div class="row mb-4">
@@ -199,7 +119,6 @@
     </section>
 
     {{-- Berita --}}
-
     <section class="section posts-entry posts-entry-sm bg-body-tertiary">
         <div class="container">
             <div class="row mb-4">

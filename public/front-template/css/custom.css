@@ -107,7 +107,7 @@
 .tours__item__pic {
 	position: relative;
 	z-index: 1;
-	padding-right: 50px;
+	padding-right: 35px;
 	margin-bottom: 110px;
 	padding-left: 30px;
 }
@@ -128,7 +128,7 @@
 .tours__item__pic:after {
 	position: absolute;
 	left: 50px;
-	top: -50px;
+	top: 37px;
 	width: calc(100% - 50px);
 	height: 100%;
 	border: 20px solid rgba(9, 53, 247, 0.1);
@@ -337,7 +337,7 @@
     z-index: 1;
 }
 .section-title h2 {
-	font-size: 42px;
+	font-size: 35px;
 	/* color: #111111; */
 	font-weight: 700;
 	text-transform: uppercase;
@@ -579,7 +579,7 @@
 } */
 
 .youtube .section-title h1 {
-	font-size: 90px;
+	font-size: 73px;
 }
 
 .youtube__item {
@@ -1539,7 +1539,7 @@ img-box .play_btn img {
 	border-radius: 10px;
   }
   
-  .container:hover .overlay {
+  .container-image:hover .overlay {
 	opacity: 0.9;
   }
   
@@ -1829,6 +1829,26 @@ img-box .play_btn img {
 .events{
 	padding-top: 80px;
 	padding-bottom: 80px;
+}
+
+.title-entry h5{
+	font-size: 17px;
+	margin-bottom: 2rem;
+}
+
+.program__item{
+	display: flex;
+    align-items: center;
+    -webkit-transition: all, 0.3s;
+    -o-transition: all, 0.3s;
+    transition: all, 0.3s;
+    margin-bottom: 15px;
+}
+
+.program__item img{
+	width: 70px;
+	height: 70px;
+	object-fit: cover;
 }
 
 

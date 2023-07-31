@@ -20,7 +20,7 @@ class HomeController extends Controller
         $article2 = Post::orderBy('id', 'desc')->where('category_id', '=', '1')->offset(3)->limit(2)->get();
         $video = Video::orderBy('id', 'desc')->limit(1)->get();
         $video1 = Video::orderBy('id', 'desc')->offset(1)->limit(2)->get();
-        $program = Program::orderBy('id', 'desc')->limit(4)->get();
+        $programs = Program::orderBy('id', 'desc')->limit(4)->get();
         $penyiar = Profile::with('user')
             ->leftJoin('users', 'users.id', '=', 'profiles.user_id')
             ->where('users.host', 1)
@@ -39,6 +39,6 @@ class HomeController extends Controller
             echo 'Data tidak ditemukan.';
         }
         // ============================
-        return view('home', compact('article', 'article1', 'article2', 'program', 'video', 'video1', 'berita', 'penyiar'));
+        return view('home', compact('article', 'article1', 'article2', 'programs', 'video', 'video1', 'berita', 'penyiar'));
     }
 }

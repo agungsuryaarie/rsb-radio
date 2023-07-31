@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->unsignedBigInteger('host');
             $table->string('name');
+            $table->string('slug');
             $table->text('description');
             $table->string('cover');
             $table->timestamps();

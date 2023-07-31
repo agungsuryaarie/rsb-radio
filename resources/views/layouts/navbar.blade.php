@@ -16,7 +16,7 @@
                     <a class="nav-link active" aria-current="page" href="{{ route('article.index') }}">News</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/program">Program</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('programs.index') }}">Program</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ route('watch.index') }}">Watch</a>

@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Auth;
 use \Yajra\Datatables\Datatables;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
+use Illuminate\Support\Str;
 
 class ProgramController extends Controller
 {
@@ -90,6 +91,7 @@ class ProgramController extends Controller
         $data = [
             'host' => $request->host,
             'name' => $request->name,
+            'slug' => Str::slug($request->name),
             'description' => $request->description,
         ];
 

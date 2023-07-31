@@ -10309,7 +10309,9 @@ textarea {
       display: table;
       color: #4D4C7D; }
       .post-entry-sidebar ul li a img, .post-entry-footer ul li a img {
-        width: 90px; }
+        width: 90px;
+      height: 90px;
+    object-fit: cover; }
       .post-entry-sidebar ul li a img, .post-entry-sidebar ul li a .text, .post-entry-footer ul li a img, .post-entry-footer ul li a .text {
         display: table-cell;
         vertical-align: middle; }
