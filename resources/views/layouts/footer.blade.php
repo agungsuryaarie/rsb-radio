@@ -1,4 +1,60 @@
-<footer class="site-footer bg-body-white shadow-lg">
+<footer class="footer">
+    <div class="container">
+        <div class="footer__top">
+            <div class="row">
+                <div class="col-lg-6 col-md-6">
+                    <div class="footer__top__logo">
+                        <a href="#"><img src="{{ url('front-template/images/logo-footer.png') }}" alt=""
+                                style="width: 150px"></a>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="footer__top__social">
+                        <a href="#"><i class="icon-facebook"></i></a>
+                        <a href="#"><i class="icon-twitter"></i></a>
+                        <a href="#"><i class="icon-instagram"></i></a>
+                        <a href="#"><i class="icon-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__option">
+            <div class="row-footer">
+                <div class="col-lg-4 col-md-6 col-sm-6">
+                    <div class="footer__option__item">
+                        <h5>Radio Suara Batu Bara</h5>
+                        <p>Formed in 2006 by Matt Hobbs and Cael Jones, Videoprah is an award-winning, full-service
+                            production company specializing.</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="footer__option__item">
+                        <h5>Diskominfo Kab. Batu Bara</h5>
+                        <p>Indrapura, Kec. Air Putih, Kabupaten Batu Bara, Sumatera Utara 21256</p>
+                        <form action="#">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copyright">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                    <p class="footer__copyright__text">Copyright ©
+                        <script>
+                            document.write(new Date().getFullYear());
+                        </script>2023
+                        All rights reserved | Radio Suara Batu Bara FM 89.3
+                    </p>
+                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+{{-- <footer class="site-footer bg-body-white shadow-lg">
     <div class="container">
         <div class="row-footer">
             <div class="col-lg-4">
@@ -36,7 +92,7 @@
             </div>
         </div>
     </div>
-</footer>
+</footer> --}}
 
 <!-- Preloader -->
 <div id="overlayer"></div>
