@@ -1647,6 +1647,12 @@ img-box .play_btn img {
 	width: 100%;
 	/* height: 190px; */
 }
+.img-events{
+	width: 100%;
+    height: 270px;
+    object-fit: cover;
+    object-position: center;
+}
 
 
 .container-image {

@@ -12,11 +12,13 @@
                         @foreach ($events as $e)
                             <div class="col-md-3">
                                 <div class="blog-entry">
-                                    <a href="single.html" class="img-link">
-                                        <img src="{{ url('storage/event', $e->cover) }}" alt="Image" class="img-fluid">
+                                    <a href="{{ route('events.show', $e->slug) }}"class="img-link">
+                                        <img src="{{ url('storage/event', $e->cover) }}" alt="Image" class="img-events">
+
+                                        <h2><a class="nav-link active"
+                                                href="{{ route('events.show', $e->slug) }}">{{ $e->title }} </a></h2>
+                                        <span class="date">{{ $e->created_at }}</span>
                                     </a>
-                                    <h2><a class="nav-link active" href="#">{{ $e->title }} </a></h2>
-                                    <span class="date">{{ $e->created_at }}</span>
                                 </div>
                             </div>
                         @endforeach

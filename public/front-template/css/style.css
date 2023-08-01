@@ -10017,7 +10017,7 @@ textarea {
 .posts-entry .blog-entry .img-link {
   position: relative;
   overflow: hidden;
-  display: inline-block;
+  display: block;
   border-radius: 10px;
   margin-bottom: 10px; }
 

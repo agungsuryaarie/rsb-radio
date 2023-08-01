@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use \Yajra\Datatables\Datatables;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Str;
 
 class EventController extends Controller
 {
@@ -74,6 +75,7 @@ class EventController extends Controller
             ],
             [
                 'title' => $request->title,
+                'slug' => Str::slug($request->title),
                 'description' => $request->description,
                 'cover' => $filename,
             ]

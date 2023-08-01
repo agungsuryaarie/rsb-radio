@@ -27,9 +27,9 @@ use App\Http\Controllers\PenyiarController;
 // Route::get('/post_show', function () {
 //     return view('post_show');
 // });
-Route::get('/events', function () {
-    return view('events');
-});
+// Route::get('/events', function () {
+//     return view('events');
+// });
 
 Route::get('/playlist', function () {
     return view('playlist');
@@ -51,6 +51,7 @@ Route::get('/galeri', [GaleriController::class, 'index'])->name('galeri.index');
 Route::get('/galeri/foto/detail/{id}', [GaleriController::class, 'show'])->name('galeri.show');
 // Events
 Route::get('/events', [EventsController::class, 'index'])->name('events.index');
+Route::get('/events/{events:slug}', [EventsController::class, 'show'])->name('events.show');
 // Article
 Route::get('/article', [ArticleController::class, 'index'])->name('article.index');
 Route::get('/article/{article:slug}', [ArticleController::class, 'show'])->name('article.show');
