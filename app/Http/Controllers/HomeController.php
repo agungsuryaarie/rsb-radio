@@ -9,7 +9,6 @@ use App\Models\Profile;
 use App\Models\Program;
 use App\Models\User;
 use App\Models\Video;
-use Illuminate\Support\Facades\Http;
 
 class HomeController extends Controller
 {
@@ -29,12 +28,21 @@ class HomeController extends Controller
         // API berita batubarakab.go.id
         $apiToken = 'BB-20b2c23d2a0fe5001834efa232f1cd15';
         $apiUrl = 'https://batubarakab.go.id/api/v1/berita?key=' . $apiToken;
-        $response = Http::withHeaders([
-            'Authorization' => 'Bearer ' . $apiToken,
-            'Accept' => 'application/json',
-        ])->get($apiUrl);
-        if ($response->successful()) {
-            $berita = $response->json();
+
+        $ch = curl_init($apiUrl);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, [
+            'Authorization: Bearer ' . $apiToken,
+            'Accept: application/json',
+        ]);
+
+        $response = curl_exec($ch);
+        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+
+        curl_close($ch);
+
+        if ($httpCode === 200) {
+            $berita = json_decode($response, true);
         } else {
             echo 'Data tidak ditemukan.';
         }
