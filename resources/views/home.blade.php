@@ -119,7 +119,7 @@
     </section>
 
     {{-- Berita --}}
-    <section class="section posts-entry posts-entry-sm bg-body-tertiary">
+    {{-- <section class="section posts-entry posts-entry-sm bg-body-tertiary">
         <div class="container">
             <div class="row mb-4">
                 <div class="col-sm-6">
@@ -150,7 +150,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> --}}
 
     <div class="section bg-primary-50">
         <div class="container">
