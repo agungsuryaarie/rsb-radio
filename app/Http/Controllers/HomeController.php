@@ -30,7 +30,7 @@ class HomeController extends Controller
         $apiUrl = 'https://batubarakab.go.id/api/v1/berita?key=' . $apiToken;
 
         $ch = curl_init($apiUrl);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);
         curl_setopt($ch, CURLOPT_HTTPHEADER, [
             'Authorization: Bearer ' . $apiToken,
             'Accept: application/json',
