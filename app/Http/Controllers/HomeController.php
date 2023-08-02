@@ -9,6 +9,8 @@ use App\Models\Profile;
 use App\Models\Program;
 use App\Models\User;
 use App\Models\Video;
+use GuzzleHttp\Client;
+use GuzzleHttp\Exception\GuzzleException;
 
 class HomeController extends Controller
 {
@@ -26,25 +28,31 @@ class HomeController extends Controller
             ->select('profiles.picture')
             ->get();
         // API berita batubarakab.go.id
-        $apiToken = 'BB-20b2c23d2a0fe5001834efa232f1cd15';
-        $apiUrl = 'https://batubarakab.go.id/api/v1/berita?key=' . $apiToken;
+        try {
+            $apiToken = 'BB-20b2c23d2a0fe5001834efa232f1cd15';
+            $apiUrl = 'https://batubarakab.go.id/api/v1/berita?key=' . $apiToken;
 
-        $ch = curl_init($apiUrl);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, false);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, [
-            'Authorization: Bearer ' . $apiToken,
-            'Accept: application/json',
-        ]);
+            $client = new Client();
 
-        $response = curl_exec($ch);
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+            $response = $client->get($apiUrl, [
+                'headers' => [
+                    'Authorization' => 'Bearer ' . $apiToken,
+                    'Accept' => 'application/json',
+                ],
+            ]);
 
-        curl_close($ch);
-
-        if ($httpCode === 200) {
-            $berita = json_decode($response, true);
-        } else {
-            echo 'Data tidak ditemukan.';
+            $berita = json_decode($response->getBody(), true);
+        } catch (GuzzleException $e) {
+            // Handle Guzzle-specific exceptions
+            // For example: ConnectionException, RequestException, etc.
+            // You can log the error, display a message, or take other actions
+            // based on the specific exception type.
+            echo 'Guzzle Exception: ' . $e->getMessage();
+        } catch (Exception $e) {
+            // Handle general exceptions
+            // You can use this catch block for any other types of exceptions
+            // that might occur during the API request.
+            echo 'General Exception: ' . $e->getMessage();
         }
         // ============================
         return view('home', compact('article', 'article1', 'article2', 'programs', 'video', 'video1', 'berita', 'penyiar'));
