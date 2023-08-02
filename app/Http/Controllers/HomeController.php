@@ -30,7 +30,7 @@ class HomeController extends Controller
         // API berita batubarakab.go.id
         try {
             $apiToken = 'BB-20b2c23d2a0fe5001834efa232f1cd15';
-            $apiUrl = 'https://batubarakab.go.id/api/v1/berita?key=' . $apiToken;
+            $apiUrl = 'https://batubarakab.go.id/api/v1/berita?key=BB-20b2c23d2a0fe5001834efa232f1cd15';
 
             $client = new Client();
 
@@ -43,10 +43,9 @@ class HomeController extends Controller
 
             $berita = json_decode($response->getBody(), true);
         } catch (GuzzleException $e) {
-            // Handle Guzzle-specific exceptions
-            // For example: ConnectionException, RequestException, etc.
-            // You can log the error, display a message, or take other actions
-            // based on the specific exception type.
+            echo 'Guzzle Exception: ' . $e->getMessage() . '<br>';
+            echo 'Exception Code: ' . $e->getCode() . '<br>';
+            echo 'Exception Trace: ' . $e->getTraceAsString();
             echo 'Guzzle Exception: ' . $e->getMessage();
         } catch (Exception $e) {
             // Handle general exceptions
