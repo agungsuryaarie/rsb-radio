@@ -10,7 +10,6 @@ use App\Models\Program;
 use App\Models\User;
 use App\Models\Video;
 use GuzzleHttp\Client;
-use GuzzleHttp\Exception\GuzzleException;
 
 class HomeController extends Controller
 {
@@ -28,31 +27,24 @@ class HomeController extends Controller
             ->select('profiles.picture')
             ->get();
         // API berita batubarakab.go.id
-        try {
-            $apiToken = 'BB-20b2c23d2a0fe5001834efa232f1cd15';
-            $apiUrl = 'https://batubarakab.go.id/api/v1/berita?key=BB-20b2c23d2a0fe5001834efa232f1cd15';
+        $apiUrl = 'https://batubarakab.go.id/api/v1/berita?key=BB-20b2c23d2a0fe5001834efa232f1cd15';
 
-            $client = new Client();
+        // Set up stream context options
+        $options = [
+            'ssl' => [
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+            ],
+        ];
 
-            $response = $client->get($apiUrl, [
-                'headers' => [
-                    'Authorization' => 'Bearer ' . $apiToken,
-                    'Accept' => 'application/json',
-                ],
-            ]);
+        // Create a stream context
+        $context = stream_context_create($options);
 
-            $berita = json_decode($response->getBody(), true);
-        } catch (GuzzleException $e) {
-            echo 'Guzzle Exception: ' . $e->getMessage() . '<br>';
-            echo 'Exception Code: ' . $e->getCode() . '<br>';
-            echo 'Exception Trace: ' . $e->getTraceAsString();
-            echo 'Guzzle Exception: ' . $e->getMessage();
-        } catch (Exception $e) {
-            // Handle general exceptions
-            // You can use this catch block for any other types of exceptions
-            // that might occur during the API request.
-            echo 'General Exception: ' . $e->getMessage();
-        }
+        // Fetch data using file_get_contents()
+        $response = file_get_contents($apiUrl, false, $context);
+
+        // Decode JSON response
+        $berita = json_decode($response, true);
         // ============================
         return view('home', compact('article', 'article1', 'article2', 'programs', 'video', 'video1', 'berita', 'penyiar'));
     }
