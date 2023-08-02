@@ -10,22 +10,22 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('home.index') }}">Home</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('home.index') }}">Beranda</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('article.index') }}">News</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('article.index') }}">Berita RSB</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" aria-current="page" href="{{ route('programs.index') }}">Program</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('watch.index') }}">Watch</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('watch.index') }}">Tonton</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="{{ route('galeri.index') }}">Galery</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('galeri.index') }}">Galeri</a>
                 </li>
                 <li class="nav-item me-2">
-                    <a class="nav-link active" aria-current="page" href="{{ route('events.index') }}">Events</a>
+                    <a class="nav-link active" aria-current="page" href="{{ route('events.index') }}">Acara</a>
                 </li>
 
                 {{-- <li class="nav-item dropdown">
@@ -66,10 +66,10 @@
                 </li> --}}
                 <div class="navbar-cta" role="search">
                     <a class="btn btn-outline-primary border-purple me-2 text-bold"
-                        href="{{ route('login') }}">Login</a>
+                        href="{{ route('login') }}">Masuk</a>
                     <a class="btn btn-primary border-purple me-2 text-purple" href="{{ route('register') }}">
                         <i class="fa fa-user-plus"></i>
-                        Sign up</a>
+                        Daftar</a>
                 </div>
             </ul>
             {{-- <div class="top_player ">
