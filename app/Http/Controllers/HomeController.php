@@ -27,24 +27,25 @@ class HomeController extends Controller
             ->select('profiles.picture')
             ->get();
         // API berita batubarakab.go.id
-        $apiUrl = 'https://batubarakab.go.id/api/v1/berita?key=BB-20b2c23d2a0fe5001834efa232f1cd15';
+        $apiToken = 'BB-20b2c23d2a0fe5001834efa232f1cd15';
+        $apiUrl = 'https://batubarakab.go.id/api/v1/berita?key=' . $apiToken;
 
-        // Set up stream context options
         $options = [
-            'ssl' => [
-                'verify_peer' => false,
-                'verify_peer_name' => false,
+            'http' => [
+                'header' => 'Authorization: Bearer ' . $apiToken . "\r\n" .
+                    'Accept: application/json' . "\r\n",
+                'method' => 'GET',
             ],
         ];
 
-        // Create a stream context
         $context = stream_context_create($options);
-
-        // Fetch data using file_get_contents()
         $response = file_get_contents($apiUrl, false, $context);
 
-        // Decode JSON response
-        $berita = json_decode($response, true);
+        if ($response) {
+            $berita = json_decode($response, true);
+        } else {
+            echo 'Data tidak ditemukan.';
+        }
         // ============================
         return view('home', compact('article', 'article1', 'article2', 'programs', 'video', 'video1', 'berita', 'penyiar'));
     }
