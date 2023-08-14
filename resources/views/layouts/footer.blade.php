@@ -23,8 +23,7 @@
                 <div class="col-lg-4 col-md-6 col-sm-6">
                     <div class="footer__option__item">
                         <h5>Radio Suara Batu Bara</h5>
-                        <p>Formed in 2006 by Matt Hobbs and Cael Jones, Videoprah is an award-winning, full-service
-                            production company specializing.</p>
+                        <p>Radionya Masyarakat Batu Bara</p>
                     </div>
                 </div>
                 <div class="col-lg-4 col-md-12">
