@@ -51,7 +51,8 @@ class PostController extends Controller
         //Translate Bahasa Indonesia
         $message = array(
             'title.required'            => 'Judul harus diisi.',
-            'category_id.required'    => 'Kategori harus dipilih.',
+            'title.max'                 => 'Judul maksimal 255 karakter.',
+            'category_id.required'      => 'Kategori harus dipilih.',
             'content.required'          => 'Konten harus diisi.',
             'status.required'           => 'Status harus dipilih.',
             'image.required' => 'Gambar harus diupload.',
@@ -59,8 +60,8 @@ class PostController extends Controller
 
         // Validasi input dengan rule yang ditentukan
         $validator = Validator::make($request->all(), [
-            'title'             => 'required',
-            'category_id'     => 'required',
+            'title'             => 'required|max:255',
+            'category_id'       => 'required',
             'content'           => 'required',
             'status'            => 'required',
             'image'             => $request->hidden_id ? 'nullable' : 'required', // Menjadikan gambar opsional saat edit
@@ -90,14 +91,14 @@ class PostController extends Controller
         }
 
         $postData = [
-            'user_id' => Auth::user()->id,
-            'category_id' => $request->category_id,
-            'title' => $request->title,
-            'slug' => Str::slug($request->title),
-            'content' => $request->content,
-            'status' => $request->status,
-            'tanggal' => date('Y-m-d'),
-            'jam' => date('H:i:s'),
+            'user_id'       => Auth::user()->id,
+            'category_id'   => $request->category_id,
+            'title'         => $request->title,
+            'slug'          => Str::slug($request->title),
+            'content'       => $request->content,
+            'status'        => $request->status,
+            'tanggal'       => date('Y-m-d'),
+            'jam'           => date('H:i:s'),
         ];
 
         if ($filename) {

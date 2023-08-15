@@ -7,6 +7,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>RSBFM &mdash; {{ $menu }}</title>
+    <link rel="icon" href="{{ asset('favicon.png') }}" />
     <link rel="stylesheet" href="{{ asset('back-template/modules/bootstrap/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ asset('back-template/modules/fontawesome/css/all.min.css') }}">
     <link rel="stylesheet" href="{{ asset('back-template/modules/datatables/datatables.min.css') }}">

@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--===============================================================================================-->
-    <link rel="icon" type="login-template/image/png" href="login-template/images/icons/favicon.ico" />
+    <link rel="icon" href="{{ asset('favicon.png') }}" />
     <!--===============================================================================================-->
     <link rel="stylesheet" type="text/css" href="login-template/vendor/bootstrap/css/bootstrap.min.css">
     <!--===============================================================================================-->
