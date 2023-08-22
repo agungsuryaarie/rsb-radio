@@ -7,6 +7,7 @@ use App\Models\Event;
 use App\Models\Post;
 use App\Models\Profile;
 use App\Models\Program;
+use App\Models\User;
 use App\Models\UserPublic;
 use App\Models\Video;
 use Illuminate\Http\Request;
@@ -154,7 +155,7 @@ class ApiController extends Controller
     }
     public function getHost()
     {
-        $hosts = Profile::join('users', 'profiles.user_id', '=', 'users.id')
+        $hosts = User::join('profiles', 'users.id', '=', 'profiles.user_id')
             ->where('users.host', 1)
             ->select('profiles.*')
             ->get();
