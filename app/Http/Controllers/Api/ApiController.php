@@ -154,8 +154,12 @@ class ApiController extends Controller
     }
     public function getHost()
     {
-        $host = Profile::with('user')->where('host', 1)->get();
-        return response()->json($host);
+        $hosts = Profile::join('users', 'profiles.user_id', '=', 'users.id')
+            ->where('users.host', 1)
+            ->select('profiles.*')
+            ->get();
+
+        return response()->json($hosts);
     }
     public function getHostDetail($id)
     {
