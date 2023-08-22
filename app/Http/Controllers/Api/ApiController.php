@@ -3,8 +3,12 @@
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
-use App\Models\User;
+use App\Models\Event;
+use App\Models\Post;
+use App\Models\Profile;
+use App\Models\Program;
 use App\Models\UserPublic;
+use App\Models\Video;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -15,9 +19,9 @@ class ApiController extends Controller
     public function login(Request $request)
     {
         $message = array(
-            'email.required' => 'Mohon diisi.',
+            'email.required' => 'Email harus diisi.',
             'email.email' => 'Penulisan email tidak benar.',
-            'password.required' => 'Mohon diisi.',
+            'password.required' => 'Password harus diisi.',
         );
         $validator = Validator::make($request->all(), [
             'email' => 'required|email',
@@ -61,7 +65,6 @@ class ApiController extends Controller
             'nohp.required' => 'Nomor Hp/WhatsApp harus diisi.',
             'nohp.unique' => 'Nomor Hp/WhatsApp sudah digunakan.',
             'password.required' => 'Password harus diisi.',
-            'password.confirmed' => 'Password tidak sesuai dengan Konfirmasi Password.',
             'password.min' => 'Password minimal 8 karakter.',
             'password_confirmation.required' => 'Konfirmasi Password harus diisi.',
             'password_confirmation.same' => 'Konfirmasi Password tidak sesuai dengan Password.',
@@ -71,7 +74,7 @@ class ApiController extends Controller
             'name' => 'required|string|max:255',
             'email' => 'required|string|email|unique:users_public|max:255',
             'nohp' => 'required|string|max:20|unique:users_public',
-            'password' => 'required|string|min:8|confirmed',
+            'password' => 'required|string|min:8',
             'password_confirmation' => 'required|min:8|same:password',
         ], $message);
 
@@ -87,7 +90,7 @@ class ApiController extends Controller
         ]);
         $user->save();
 
-        return response()->json(['message' => 'Registrasi berhasil.'], 201);
+        return response()->json(['message' => 'Pendaftaran berhasil.'], 201);
     }
 
     public function getUserData(Request $request)
@@ -106,5 +109,66 @@ class ApiController extends Controller
         return response()->json([
             'message' => 'Sampai ketemu lagi',
         ]);
+    }
+    public function getBerita()
+    {
+        $berita = Post::where('status', '=', 1)->get();
+        return response()->json($berita);
+    }
+    public function getBeritaDetail($id)
+    {
+        try {
+            $news = Post::findOrFail($id);
+            return response()->json($news);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Berita tidak ditemukan.'], 404);
+        }
+    }
+    public function getProgram()
+    {
+        $program = Program::with('user')->get();
+        return response()->json($program);
+    }
+    public function getProgramDetail($id)
+    {
+        try {
+            $program = Program::with('user')->findOrFail($id);
+            return response()->json($program);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Program tidak ditemukan.'], 404);
+        }
+    }
+    public function getEvent()
+    {
+        $event = Event::get();
+        return response()->json($event);
+    }
+    public function getEventDetail($id)
+    {
+        try {
+            $event = Event::findOrFail($id);
+            return response()->json($event);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Event tidak ditemukan.'], 404);
+        }
+    }
+    public function getHost()
+    {
+        $host = Profile::with('user')->get();
+        return response()->json($host);
+    }
+    public function getHostDetail($id)
+    {
+        try {
+            $host = Profile::with('user')->findOrFail($id);
+            return response()->json($host);
+        } catch (\Exception $e) {
+            return response()->json(['error' => 'Host tidak ditemukan.'], 404);
+        }
+    }
+    public function getVideo()
+    {
+        $video = Video::get();
+        return response()->json($video);
     }
 }
