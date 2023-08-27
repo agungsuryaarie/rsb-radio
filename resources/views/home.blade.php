@@ -107,7 +107,10 @@
                         <div class="col-videos">
                             <div class="blog__item">
                                 <div class="blog__item__pic">
-                                    <img src="{{ asset('storage/userUpload/' . $pr->profile->picture) }}" alt="">
+                                    @if (isset($pr->profile->picture))
+                                        <img src="{{ asset('storage/userUpload/' . $pr->profile->picture) }}"
+                                            alt="">
+                                    @endif
                                 </div>
                             </div>
                         </div>
