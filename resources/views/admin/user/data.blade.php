@@ -5,6 +5,7 @@
         <x-breadcrumb menu="{{ $menu }}"></x-breadcrumb>
         <x-datatable link="javascript:void(0)">
             <th class="text-center"></th>
+            <th>Foto</th>
             <th>Nama</th>
             <th>Email</th>
             <th>Role</th>
@@ -26,6 +27,7 @@
         </x-dropdown>
         <x-input type="password" name="password" label="Password"></x-input>
         <x-input type="password" name="password_confirmation" label="Password Confirmation"></x-input>
+        <x-input type="file" name="picture" label="Foto Profile"></x-input>
     </x-ajaxModel>
 
     <x-modalDelete></x-modalDelete>
@@ -44,6 +46,10 @@
             var myTable = DataTable("{{ route('user.index') }}", [{
                     data: "DT_RowIndex",
                     name: "DT_RowIndex",
+                },
+                {
+                    data: "foto",
+                    name: "foto",
                 },
                 {
                     data: "name",
@@ -80,7 +86,7 @@
             editModel(editUrl, editHeading, field)
 
             // Save
-            saveBtn("{{ route('user.store') }}", myTable);
+            saveImage("{{ route('user.store') }}", myTable);
 
             // Delete
             var fitur = "User";

@@ -107,8 +107,7 @@
                         <div class="col-videos">
                             <div class="blog__item">
                                 <div class="blog__item__pic">
-                                    <img src="{{ url('storage/userUpload', $pr->picture) }}" alt=""
-                                        class="rounded-full">
+                                    <img src="{{ asset('storage/userUpload/' . $pr->profile->picture) }}" alt="">
                                 </div>
                             </div>
                         </div>

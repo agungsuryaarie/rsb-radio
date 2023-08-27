@@ -3,10 +3,12 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Profile;
 use App\Models\User;
 use Illuminate\Http\Request;
 use \Yajra\Datatables\Datatables;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Storage;
 
 class UserController extends Controller
 {
@@ -14,9 +16,17 @@ class UserController extends Controller
     {
         $menu = 'Users';
         if ($request->ajax()) {
-            $data = User::latest()->get();
+            $data = User::with('profile')->latest()->get();
             return Datatables::of($data)
                 ->addIndexColumn()
+                ->addColumn('foto', function ($data) {
+                    if (isset($data->profile->picture)) {
+                        $foto = 'storage/userUpload/' . $data->profile->picture;
+                    } else {
+                        $foto = "blank.jpg";
+                    }
+                    return "<img alt='image' src='" . asset($foto) . "' class='img-fluid' style='width:100px;'>";
+                })
                 ->addColumn('role', function ($data) {
                     if ($data->role == 1) {
                         return "Admin";
@@ -36,7 +46,7 @@ class UserController extends Controller
                     $btn = '<center>' . $btn . ' <a href="javascript:void(0)" data-toggle="tooltip"  data-id="' . $row->id . '" data-original-title="Delete" class="btn btn-danger btn-xs delete"><i class="fas fa-trash"></i></a><center>';
                     return $btn;
                 })
-                ->rawColumns(['action'])
+                ->rawColumns(['action', 'foto'])
                 ->make(true);
         }
 
@@ -108,6 +118,34 @@ class UserController extends Controller
                 'id' => $request->hidden_id
             ],
             $userData
+        );
+
+        $filename = null; // Inisialisasi variabel filename
+        $oldpicture = null; // Inisialisasi variabel oldpictureName
+
+        if ($request->hasFile('picture')) {
+            // Hapus gambar lama dari storage jika ada
+            if ($request->hidden_id) {
+                $profile = Profile::find($request->hidden_id);
+                $oldpicture = $profile->picture;
+                if ($oldpicture) {
+                    Storage::delete('public/userUpload/' . $oldpicture);
+                }
+            }
+
+            // Unggah gambar baru
+            $picture = $request->file('picture');
+            $filename = time() . '.' . $picture->getClientOriginalExtension();
+            $picture->storeAs('public/userUpload', $filename);
+        }
+
+        Profile::updateOrCreate(
+            [
+                'user_id' => $request->hidden_id
+            ],
+            [
+                'picture' => $filename,
+            ]
         );
 
         return response()->json(['success' => 'User saved successfully.']);
