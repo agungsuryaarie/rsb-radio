@@ -124,15 +124,6 @@ class UserController extends Controller
         $oldpicture = null; // Inisialisasi variabel oldpictureName
 
         if ($request->hasFile('picture')) {
-            // Hapus gambar lama dari storage jika ada
-            if ($request->hidden_id) {
-                $profile = Profile::find($request->hidden_id);
-                $oldpicture = $profile->picture;
-                if ($oldpicture) {
-                    Storage::delete('public/userUpload/' . $oldpicture);
-                }
-            }
-
             // Unggah gambar baru
             $picture = $request->file('picture');
             $filename = time() . '.' . $picture->getClientOriginalExtension();
