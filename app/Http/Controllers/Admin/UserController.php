@@ -64,13 +64,17 @@ class UserController extends Controller
         if (!$request->hidden_id) {
             //rule tambah data tanpa user_id
             $ruleEmail = 'required|email|unique:users,email';
+            $rulePassword   = 'required|min:8';
+            $ruleConfPassword   = 'required|same:password|min:8';
         } else {
             //rule edit jika tidak ada user_id
+            $rulePassword   = 'nullable|min:8';
+            $ruleConfPassword   = 'nullable|same:password|min:8';
             $user = User::where('id', $request->hidden_id)->first();
             if ($user->email == $request->email) {
                 $ruleEmail = 'required|email';
             } else {
-                $ruleEmail = 'required|email|unique:users_puskesmas,email';
+                $ruleEmail = 'required|email|unique:users,email';
             }
         }
 
@@ -80,8 +84,8 @@ class UserController extends Controller
             'email'                 =>  $ruleEmail,
             'role'                  => 'required',
             'host'                  => 'required',
-            'password'              => $request->input('password') ? 'required|min:8' : 'required',
-            'password_confirmation' => $request->input('password') ? 'required|same:password|min:8' : 'required',
+            'password'              => $rulePassword,
+            'password_confirmation' =>  $ruleConfPassword
         ], $message);
 
         if ($validator->fails()) {

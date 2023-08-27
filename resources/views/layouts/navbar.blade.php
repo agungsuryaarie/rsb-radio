@@ -37,8 +37,27 @@
                     </div>
                 @endguest
                 @auth
-                    <div class="navbar-cta" role="search">
-                        <span class="btn btn-primary border-purple me-2 text-purple">Halo, {{ Auth::user()->name }}!
+                    <div class="dropdown">
+                        <button class="dd-button btn btn-primary border-purple me-2 text-purple" data-label="Dropdown">
+                            Halo, {{ Auth::user()->name }}!
+                        </button>
+                        <ul class="dd-menu">
+                            <li>
+                                <a href="{{ route('profil.index') }}" class="dropdown-item has-icon">
+                                    <i class="far fa-user"></i> Profile
+                                </a>
+                            </li>
+                            <li>
+                                <a href="{{ route('logout') }}" class="dropdown-item has-icon text-danger"
+                                    onclick="event.preventDefault();
+                                document.getElementById('logout-form').submit();">
+                                    <i class="fas fa-sign-out-alt"></i> {{ __('Logout') }}
+                                </a>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                </form>
+                            </li>
+                        </ul>
                     </div>
                 @endauth
             </ul>

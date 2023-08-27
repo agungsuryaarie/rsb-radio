@@ -38,60 +38,17 @@
         <div class="footer__copyright">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                     <p class="footer__copyright__text">Copyright ©
                         <script>
                             document.write(new Date().getFullYear());
                         </script>2023
                         All rights reserved | Radio Suara Batu Bara FM 89.3
                     </p>
-                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                 </div>
             </div>
         </div>
     </div>
 </footer>
-
-
-{{-- <footer class="site-footer bg-body-white shadow-lg">
-    <div class="container">
-        <div class="row-footer">
-            <div class="col-lg-4">
-                <div class="widget">
-                    <div class="d-flex mb-3">
-                        <img src="{{ url('front-template/images/logo.png') }}" style="width: 150px">
-                    </div>
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there
-                        live the blind texts.</p>
-                </div>
-            </div>
-            <div class="col-lg-4 ps-lg-5">
-                <div class="widget">
-                    <h3 class="mb-4">Diskominfo Kab. Batu Bara</h3>
-                    <p>Indrapura, Kec. Air Putih, Kabupaten Batu Bara, Sumatera Utara 21256</p>
-                </div>
-                <div class="widget">
-                    <h3>Ikuti Social Media Kami</h3>
-                    <ul class="list-unstyled social">
-                        <li><a href="#"><span class="icon-instagram"></span></a></li>
-                        <li><a href="#"><span class="icon-twitter"></span></a></li>
-                        <li><a href="#"><span class="icon-facebook"></span></a></li>
-                        <li><a href="#"><span class="icon-youtube"></span></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-5">
-            <div class="col-12 text-center">
-                <p>Copyright &copy;
-                    <script>
-                        document.write(new Date().getFullYear());
-                    </script>. Radio Suara Batu Bara FM 89.3
-            </div>
-        </div>
-    </div>
-</footer> --}}
 
 <!-- Preloader -->
 <div id="overlayer"></div>
@@ -120,12 +77,5 @@
 <script src="{{ url('front-template/js/countdown.min.js') }}"></script>
 <script src="{{ url('front-template/js/slicknav.js') }}"></script>
 <script src="{{ url('front-template/js/owl.carousel.min.js') }}"></script>
-
-{{-- <script src="{{ url('front-template/js/jquery.jplayer.min.js') }}"></script>
-<script src="{{ url('front-template/js/wavesurfer.min.js') }}"></script>
-<script src="{{ url('front-template/js/WaveSurferInit.js') }}"></script>
-<script src="{{ url('front-template/js/jplayerInit.js') }}"></script>
-<script src="{{ url('front-template/js/mixitup.min.js') }}"></script> --}}
-
 <script src="{{ url('front-template/js/main.js') }}"></script>
 <script src="{{ url('front-template/js/theme.js') }}"></script>

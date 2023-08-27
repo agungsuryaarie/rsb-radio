@@ -9,6 +9,7 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\WatchController;
 use App\Http\Controllers\ProgramsController;
 use App\Http\Controllers\PenyiarController;
+use App\Http\Controllers\ProfilController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,16 +22,6 @@ use App\Http\Controllers\PenyiarController;
 |
 */
 
-// Route::get('/post', function () {
-//     return view('post');
-// });
-// Route::get('/post_show', function () {
-//     return view('post_show');
-// });
-// Route::get('/events', function () {
-//     return view('events');
-// });
-
 Route::get('/playlist', function () {
     return view('playlist');
 });
@@ -38,12 +29,6 @@ Route::get('/streaming', function () {
     return view('streaming');
 });
 
-// Route::get('/galeri', function () {
-//     return view('galeri');
-// });
-// Route::get('/galeri_show', function () {
-//     return view('galeri_show');
-// });
 
 Route::get('/', [HomeController::class, 'index'])->name('home.index');
 // Galeri
@@ -62,3 +47,4 @@ Route::get('/programs', [ProgramsController::class, 'index'])->name('programs.in
 Route::get('/programs/{programs:slug}', [ProgramsController::class, 'show'])->name('programs.show');
 // Penyiar
 Route::get('/penyiar', [PenyiarController::class, 'index'])->name('penyiar.index');
+Route::get('/profil', [ProfilController::class, 'index'])->name('profil.index');
